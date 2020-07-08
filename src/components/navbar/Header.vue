@@ -1,7 +1,7 @@
 <template>
     <header>
         <nav>
-            <div id="menu-button" class="hamburger">
+            <div v-on:click="triggerMenu" id="menu-button" class="hamburger">
                 <div class="hamburger-line"></div>
                 <div class="hamburger-line"></div>
                 <div class="hamburger-line"></div>
@@ -12,7 +12,14 @@
 
 <script>
 export default {
-
+    props: {
+        menuShown: Boolean
+    },
+    methods: {
+        triggerMenu(){
+            this.$emit('menuShownUpdated', !this.menuShown)
+        }
+    }
 }
 </script>
 

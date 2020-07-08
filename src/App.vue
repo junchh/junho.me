@@ -1,7 +1,9 @@
 <template>
     <div>
-        <Menu></Menu>
-        <Header></Header>
+        <transition name="fade" mode="in-out">
+            <Menu :menuShown="menuShown" v-if="menuShown" v-on:menuShownUpdated="updateMenuShown"></Menu>
+        </transition>
+        <Header :menuShown="menuShown" v-on:menuShownUpdated="updateMenuShown"></Header>
         <Hero></Hero>
     </div>
 </template>
@@ -14,13 +16,19 @@
     export default {
         data: function(){
             return {
-                name: 'Max'
+                menuShown: false,
+                show: false
             }
         },
         components: {
             Header,
             Hero,
             Menu
+        },
+        methods: {
+            updateMenuShown(value){
+                this.menuShown = value
+            }
         }
     }
 </script>
@@ -42,6 +50,25 @@ html, body {
 
 a {
     text-decoration: none;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 0.2s;
+}
+.fade-enter-to {
+  opacity: 0.9;
+}
+.fade-leave {
+  opacity: 0.9;
+}
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-leave-to {
+  opacity: 0;
 }
 
 header {
