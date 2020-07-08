@@ -2,7 +2,19 @@
   <section class="hero">
         <div class="information">
             <h1 class="title">Junho Choi</h1>
-            <h2 class="subtitle">A Developer.</h2>
+            <vue-typer
+            :text='["A Student.", "A Web Developer.","A Writer."]'
+            :repeat='Infinity'
+            :shuffle='false'
+            initial-action='typing'
+            :pre-type-delay='100'
+            :type-delay='100'
+            :pre-erase-delay='2000'
+            :erase-delay='200'
+            erase-style='backspace'
+            :erase-on-complete='false'
+            caret-animation='blink'
+            ></vue-typer>
             <p class="description">I’m a computer science student who occasionally listen to music while turning melody into fully functional and reusable component.</p>
             <a href="#" class="btn-cv">Download CV</a>
             <div class="icons">
@@ -17,8 +29,12 @@
 </template>
 
 <script>
-    export default {
+    import {VueTyper} from 'vue-typer'
 
+    export default {
+        components: {
+            VueTyper
+        }
     }
 </script>
 
@@ -56,7 +72,7 @@ h1.title {
     margin-bottom: 13px;
 }
 
-h2.subtitle {
+h2.subtitle, .vue-typer {
     font-family: 'Slabo 13px', serif;
     font-size: 2.6rem;
     font-weight: 400;
