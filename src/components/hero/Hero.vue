@@ -47,9 +47,14 @@ section.hero {
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    background-color: #eee3;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .information {
     margin-right: 300px;
@@ -154,7 +159,7 @@ p.description {
         font-size: 4rem;
     }
     
-    h2.subtitle {
+    h2.subtitle, .vue-typer {
         font-size: 2.2rem;
     }
     
@@ -183,7 +188,7 @@ p.description {
         font-size: 4.5rem;
     }
     
-    h2.subtitle {
+    h2.subtitle, .vue-typer {
         font-size: 2.5rem;
     }
     

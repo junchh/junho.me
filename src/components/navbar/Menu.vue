@@ -89,7 +89,7 @@ ul {
     transition: all 200ms;
 }
 
-.nav-link:hover .slider {
+.nav-link:hover .slider, .router-link-exact-active .slider {
     width: 100%;
 }
 

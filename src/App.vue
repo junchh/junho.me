@@ -4,7 +4,7 @@
             <Menu :menuShown="menuShown" v-if="menuShown" v-on:menuShownUpdated="updateMenuShown"></Menu>
         </transition>
         <Header :menuShown="menuShown" v-on:menuShownUpdated="updateMenuShown"></Header>
-        <transition name="slide">
+        <transition :name="transitionName">
             <keep-alive>
                 <router-view/>
             </keep-alive>
@@ -20,7 +20,8 @@
         data: function(){
             return {
                 menuShown: false,
-                show: false
+                show: false,
+                transitionName: ''
             }
         },
         components: {
@@ -30,6 +31,16 @@
         methods: {
             updateMenuShown(value){
                 this.menuShown = value
+            }
+        },
+        watch: {
+            '$route' (to, from){
+                const fromPath = (from.path === '/') ? '/home' : from.path
+                const toPath = (to.path === '/') ? '/home' : to.path
+                const hierarchy = ["/home", "/about"]
+                if(fromPath !== toPath){
+                    this.transitionName = (hierarchy.indexOf(fromPath) < hierarchy.indexOf(toPath)) ? 'slide-down' : 'slide-up'
+                }
             }
         }
     }
@@ -74,14 +85,24 @@ a {
 }
 
 
-.slide-leave {
+.slide-down-leave {
     transform: translateY(0);
 }
-.slide-leave-active {
+.slide-down-leave-active {
   transition: transform 2s;
 }
-.slide-leave-to {
+.slide-down-leave-to {
   transform: translateY(-100%);
+}
+
+.slide-up-enter {
+    transform: translateY(-100%);
+}
+.slide-up-enter-active {
+  transition: transform 2s;
+}
+.slide-up-enter-to {
+  transform: translateY(0);
 }
 
 header {
@@ -93,6 +114,8 @@ header {
 @media (max-height: 450px){
     html, body {
         font-size: 8px;
+        position: absolute;
+        overflow: hidden;
     }
 }
 </style>
