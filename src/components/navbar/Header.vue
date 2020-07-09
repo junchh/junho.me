@@ -24,6 +24,9 @@ export default {
 </script>
 
 <style scoped>
+header {
+    z-index: 15;
+}
 /* Hamburger Menu */
 .hamburger {
     cursor: pointer;

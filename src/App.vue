@@ -1,17 +1,20 @@
 <template>
     <div>
-        <transition name="fade" mode="in-out">
+        <transition name="fade">
             <Menu :menuShown="menuShown" v-if="menuShown" v-on:menuShownUpdated="updateMenuShown"></Menu>
         </transition>
         <Header :menuShown="menuShown" v-on:menuShownUpdated="updateMenuShown"></Header>
-        <Hero></Hero>
+        <transition name="slide">
+            <keep-alive>
+                <router-view/>
+            </keep-alive>
+        </transition>
     </div>
 </template>
 
 <script>
     import Header from './components/navbar/Header.vue'
     import Menu from './components/navbar/Menu.vue'
-    import Hero from './components/hero/Hero.vue'
 
     export default {
         data: function(){
@@ -22,7 +25,6 @@
         },
         components: {
             Header,
-            Hero,
             Menu
         },
         methods: {
@@ -69,6 +71,17 @@ a {
 }
 .fade-leave-to {
   opacity: 0;
+}
+
+
+.slide-leave {
+    transform: translateY(0);
+}
+.slide-leave-active {
+  transition: transform 2s;
+}
+.slide-leave-to {
+  transform: translateY(-100%);
 }
 
 header {

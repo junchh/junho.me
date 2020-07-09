@@ -38,7 +38,7 @@
     }
 </script>
 
-<style scoped>
+<style>
 /* Hero / Section1 */
 section.hero {
     background-image: url(~@/assets/images/bg-huge.png);
@@ -46,6 +46,7 @@ section.hero {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: flex-end;

@@ -4,16 +4,16 @@
         <i class="fas fa-times"></i>
     </div>
     <li class="nav-item">
-        <a href="#" class="nav-link">
+        <router-link class="nav-link" to="/">
             Home
             <div class="slider"></div>
-        </a>
+        </router-link>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link">
+        <router-link class="nav-link" to="/about">
             About
             <div class="slider"></div>
-        </a>
+        </router-link>
     </li>
     <li class="nav-item">
         <a href="#" class="nav-link">
@@ -67,7 +67,7 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 5;
+    z-index: 20;
 }
 
 .nav-item {
