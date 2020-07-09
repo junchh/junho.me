@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Hero from '../components/hero/Hero.vue'
 import About from '../components/about/About.vue'
+import Projects from '../components/projects/Projects.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ Vue.use(VueRouter)
     path: '/about',
     name: 'About',
     component: About
+  },
+  {
+    path: '/projects',
+    name: 'Projects',
+    component: Projects
   }
 ]
 

@@ -38,13 +38,9 @@
 
 <script>
 export default {
-    props: {
-        menuShown: Boolean
-    },
     methods: {
         triggerMenu(){
-            console.log("HEHEHE")
-            this.$emit('menuShownUpdated', !this.menuShown)
+            this.$emit('menuShownUpdated')
         }
     }
 }

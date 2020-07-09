@@ -1,9 +1,9 @@
 <template>
     <div>
         <transition name="fade">
-            <Menu :menuShown="menuShown" v-if="menuShown" v-on:menuShownUpdated="updateMenuShown"></Menu>
+            <Menu v-if="menuShown" v-on:menuShownUpdated="updateMenuShown"></Menu>
         </transition>
-        <Header :menuShown="menuShown" v-on:menuShownUpdated="updateMenuShown"></Header>
+        <Header v-on:menuShownUpdated="updateMenuShown"></Header>
         <transition :name="transitionName">
             <keep-alive>
                 <router-view/>
@@ -15,12 +15,15 @@
 <script>
     import Header from './components/navbar/Header.vue'
     import Menu from './components/navbar/Menu.vue'
+    import router from './router/index.js'
 
     export default {
         data: function(){
             return {
                 menuShown: false,
                 show: false,
+                stillScrolling: false,
+                hierarchy: ["/", "/about", "/projects"],
                 transitionName: ''
             }
         },
@@ -29,19 +32,47 @@
             Menu
         },
         methods: {
-            updateMenuShown(value){
-                this.menuShown = value
+            updateMenuShown(){
+                this.menuShown = !this.menuShown
+            },
+            handleScroll(e){
+                if(!this.stillScrolling){
+                    const path = router.currentRoute.path
+                    let nextIndex = this.hierarchy.indexOf(path)
+                    console.log(path)
+                    console.log(nextIndex)
+                    if(e.deltaY > 0){
+                        console.log('bawah')
+                        nextIndex++
+                        if(nextIndex === 3){
+                            nextIndex = 2
+                        }
+                    } else {
+                        console.log('atas')
+                        nextIndex--
+                        if(nextIndex === -1){
+                            nextIndex = 0
+                        }
+                    }
+                    router.push(this.hierarchy[nextIndex]).catch(err => console.log(err))
+                    this.stillScrolling = true
+                    setTimeout(function(){
+                        this.stillScrolling = false
+                    }.bind(this), 1000)
+                }
             }
         },
         watch: {
             '$route' (to, from){
-                const fromPath = (from.path === '/') ? '/home' : from.path
-                const toPath = (to.path === '/') ? '/home' : to.path
-                const hierarchy = ["/home", "/about"]
+                const fromPath = from.path
+                const toPath = to.path
                 if(fromPath !== toPath){
-                    this.transitionName = (hierarchy.indexOf(fromPath) < hierarchy.indexOf(toPath)) ? 'slide-down' : 'slide-up'
+                    this.transitionName = (this.hierarchy.indexOf(fromPath) < this.hierarchy.indexOf(toPath)) ? 'slide-down' : 'slide-up'
                 }
             }
+        },
+        mounted(){
+            document.addEventListener('wheel', this.handleScroll)
         }
     }
 </script>
@@ -89,7 +120,7 @@ a {
     transform: translateY(0);
 }
 .slide-down-leave-active {
-  transition: transform 2s;
+  transition: transform 0.8s;
 }
 .slide-down-leave-to {
   transform: translateY(-100%);
@@ -99,7 +130,7 @@ a {
     transform: translateY(-100%);
 }
 .slide-up-enter-active {
-  transition: transform 2s;
+  transition: transform 0.8s;
 }
 .slide-up-enter-to {
   transform: translateY(0);

@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section @wheel="handleScroll" class="hero">
         <div class="information">
             <h1 class="title">Junho Choi</h1>
             <vue-typer
@@ -34,6 +34,11 @@
     export default {
         components: {
             VueTyper
+        }, 
+        methods: {
+            handleScroll(){
+                //console.log(e.deltaY) //e.deltaY > 0 move down, else move up
+            }
         }
     }
 </script>

@@ -12,12 +12,9 @@
 
 <script>
 export default {
-    props: {
-        menuShown: Boolean
-    },
     methods: {
         triggerMenu(){
-            this.$emit('menuShownUpdated', !this.menuShown)
+            this.$emit('menuShownUpdated')
         }
     }
 }
