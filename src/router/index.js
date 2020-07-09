@@ -10,16 +10,25 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
+    meta: {
+      title: 'Homepage'
+    },
     component: Hero
   },
   {
     path: '/about',
     name: 'About',
+    meta: {
+      title: 'About Us'
+    },
     component: About
   },
   {
     path: '/projects',
     name: 'Projects',
+    meta: {
+      title: 'My Projects'
+    },
     component: Projects
   }
 ]

@@ -58,7 +58,7 @@
                         this.stillScrolling = true
                         setTimeout(function(){
                             this.stillScrolling = false
-                        }.bind(this), 1000)
+                        }.bind(this), 200)
                     }
                 }
             }
@@ -67,10 +67,14 @@
             '$route' (to, from){
                 const fromPath = from.path
                 const toPath = to.path
+                document.title = to.meta.title
                 if(fromPath !== toPath){
                     this.transitionName = (this.hierarchy.indexOf(fromPath) < this.hierarchy.indexOf(toPath)) ? 'slide-down' : 'slide-up'
                 }
             }
+        },
+        created(){
+            document.title = this.$router.currentRoute.meta.title
         },
         mounted(){
             document.addEventListener('wheel', function(e) {
