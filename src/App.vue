@@ -4,10 +4,8 @@
             <Menu v-if="menuShown" v-on:menuShownUpdated="updateMenuShown"></Menu>
         </transition>
         <Header v-on:menuShownUpdated="updateMenuShown"></Header>
-        <transition :name="transitionName">
-            <keep-alive>
+        <transition :name="transitionName" mode="in-out">
                 <router-view/>
-            </keep-alive>
         </transition>
     </div>
 </template>
@@ -54,11 +52,13 @@
                             nextIndex = 0
                         }
                     }
-                    router.push(this.hierarchy[nextIndex]).catch(err => console.log(err))
-                    this.stillScrolling = true
-                    setTimeout(function(){
-                        this.stillScrolling = false
-                    }.bind(this), 1000)
+                    if(this.hierarchy[nextIndex] != path){
+                        router.push(this.hierarchy[nextIndex])
+                        this.stillScrolling = true
+                        setTimeout(function(){
+                            this.stillScrolling = false
+                        }.bind(this), 1000)
+                    }
                 }
             }
         },

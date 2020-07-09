@@ -13,7 +13,8 @@
 .projects {
     height: 100vh;
     width: 100vw;
-    z-index: 5;
+    z-index: 2;
+    background-color: green;
     position: absolute;
     top: 0;
     left: 0;

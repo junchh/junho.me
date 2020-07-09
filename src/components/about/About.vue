@@ -14,6 +14,7 @@
     height: 100vh;
     width: 100vw;
     z-index: 5;
+    background-color: blue;
     position: absolute;
     top: 0;
     left: 0;
