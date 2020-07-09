@@ -22,6 +22,7 @@
                 show: false,
                 stillScrolling: false,
                 hierarchy: ["/", "/about", "/projects"],
+                touchY: 0,
                 transitionName: ''
             }
         },
@@ -33,13 +34,13 @@
             updateMenuShown(){
                 this.menuShown = !this.menuShown
             },
-            handleScroll(e){
+            handleScroll(delta){
                 if(!this.stillScrolling){
                     const path = router.currentRoute.path
                     let nextIndex = this.hierarchy.indexOf(path)
                     console.log(path)
                     console.log(nextIndex)
-                    if(e.deltaY > 0){
+                    if(delta > 0){
                         console.log('bawah')
                         nextIndex++
                         if(nextIndex === 3){
@@ -72,7 +73,24 @@
             }
         },
         mounted(){
-            document.addEventListener('wheel', this.handleScroll)
+            document.addEventListener('wheel', function(e) {
+                this.handleScroll(e.deltaY)
+            }.bind(this))
+            document.addEventListener('keydown', function(e) {
+                if(e.keyCode == 38){
+                    this.handleScroll(-100)
+                } else if(e.keyCode == 40){
+                    this.handleScroll(100)
+                }
+            }.bind(this))
+            document.addEventListener('touchstart', function(e) {
+                this.touchY = e.touches[0].clientY
+            }.bind(this))
+            document.addEventListener('touchend', function(e) {
+                const deltaY = e.changedTouches[0].clientY - this.touchY 
+                console.log(deltaY)
+                this.handleScroll(-1 * deltaY)
+            }.bind(this))
         }
     }
 </script>
