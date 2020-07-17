@@ -1,5 +1,9 @@
 <template>
-  <section @wheel="handleScroll" class="hero">
+
+    <section @wheel="handleScroll" class="hero">
+        <div class="bubble1"></div>
+        <div class="bubble2"></div>
+        <div class="bubble3"></div>
         <div class="information">
             <h1 class="title">Junho Choi</h1>
             <vue-typer
@@ -46,21 +50,50 @@
 <style>
 /* Hero / Section1 */
 section.hero {
-    background-image: url(~@/assets/images/bg-huge.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #FFFFFF;
     height: 100vh;
     width: 100vw;
-    background-color: #eee3;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     z-index: 10;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
+    overflow: hidden;
 }
+
+.bubble1 {
+    background-color: #F3F3FF;
+    height: 900px;
+    width: 900px;
+    border-radius: 450px;
+    left: 45%;
+    bottom: -7%;
+    z-index: -1;
+    position: absolute;
+}
+
+.bubble2 {
+    background-color: #F3F3FF;
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+    left: -20px;
+    bottom: -20px;
+    z-index: -1;
+    position: absolute;
+}
+
+.bubble3 {
+    background-color: #F3F3FF;
+    height: 70px;
+    width: 70px;
+    border-radius: 40px;
+    left: -20px;
+    bottom: 210px;
+    z-index: -1;
+    position: absolute;
+}
+
 .information {
     margin-right: 300px;
     padding: 20px;
@@ -142,10 +175,23 @@ p.description {
 }
 
 @media (max-width: 1500px) {
-    section.hero {
-        background-image: url(~@/assets/images/bg-medium.png);
+    .bubble1 {
+        width: 800px;
+        height: 800px;
+        left: 40%;
     }
 
+    .bubble2 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bubble3 {
+        width: 50px;
+        height: 50px;
+        left: -10px;
+        bottom: 190px;
+    }
     .information {
         margin-right: 100px;
     }
@@ -156,6 +202,9 @@ p.description {
 }
 
 @media (max-width: 1200px) {
+    .bubble1 {
+        left: 35%;
+    }
     .information {
         margin-right: 0;
     }
@@ -181,10 +230,19 @@ p.description {
 }
 
 @media (max-width: 768px) {
-    section.hero {
-        background-image: url(~@/assets/images/bg-small.png);
+    .bubble1 {
+        left: 0;
+        right: -400px;
+        bottom: -400px;
     }
 
+    .bubble2 {
+        display: none;
+    }
+
+    .bubble3 {
+        display: none;
+    }
     .personal-design {
         display: none;
     }
@@ -217,6 +275,16 @@ p.description {
 @media (max-width: 360px){
     .information {
         margin-bottom: 50px;
+    }
+}
+
+@media (max-height: 700px){
+    .information {
+        margin-bottom: 50px;
+    }
+
+    .personal-design img {
+        height: 600px;
     }
 }
 

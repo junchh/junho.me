@@ -19,7 +19,6 @@
         data: function(){
             return {
                 menuShown: false,
-                show: false,
                 stillScrolling: false,
                 hierarchy: ["/", "/about", "/projects"],
                 touchY: 0,
@@ -35,6 +34,8 @@
                 this.menuShown = !this.menuShown
             },
             handleScroll(delta){
+                let bottomOfWindow = (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight)
+                let topOfWindow = (window.scrollY === 0)
                 if(!this.stillScrolling){
                     const path = router.currentRoute.path
                     let nextIndex = this.hierarchy.indexOf(path)
@@ -54,11 +55,13 @@
                         }
                     }
                     if(this.hierarchy[nextIndex] != path){
-                        router.push(this.hierarchy[nextIndex])
+                        if((delta > 0 && bottomOfWindow) || (delta <= 0 && topOfWindow)){
+                            router.push(this.hierarchy[nextIndex])
+                        }
                         this.stillScrolling = true
                         setTimeout(function(){
                             this.stillScrolling = false
-                        }.bind(this), 200)
+                        }.bind(this), 500)
                     }
                 }
             }
@@ -112,6 +115,7 @@
 html, body {
     font-family: 'Open Sans', sans-serif;
     font-size: 10px;
+    overflow-x: hidden;
 }
 
 a {
@@ -122,7 +126,7 @@ a {
   opacity: 0;
 }
 .fade-enter-active {
-  transition: opacity 0.2s;
+  transition: opacity 0.4s ease-in;
 }
 .fade-enter-to {
   opacity: 0.9;
@@ -131,7 +135,7 @@ a {
   opacity: 0.9;
 }
 .fade-leave-active {
-  transition: opacity 0.2s;
+  transition: opacity 0.4s ease-in;
 }
 .fade-leave-to {
   opacity: 0;
@@ -167,8 +171,6 @@ header {
 @media (max-height: 450px){
     html, body {
         font-size: 8px;
-        position: absolute;
-        overflow: hidden;
     }
 }
 </style>
