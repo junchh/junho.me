@@ -61,7 +61,7 @@ section.hero {
     overflow: hidden;
 }
 
-.bubble1 {
+.hero .bubble1 {
     background-color: #F3F3FF;
     height: 900px;
     width: 900px;
@@ -72,7 +72,7 @@ section.hero {
     position: absolute;
 }
 
-.bubble2 {
+.hero .bubble2 {
     background-color: #F3F3FF;
     height: 170px;
     width: 170px;
@@ -83,7 +83,7 @@ section.hero {
     position: absolute;
 }
 
-.bubble3 {
+.hero .bubble3 {
     background-color: #F3F3FF;
     height: 70px;
     width: 70px;
@@ -175,18 +175,18 @@ p.description {
 }
 
 @media (max-width: 1500px) {
-    .bubble1 {
+    .hero .bubble1 {
         width: 800px;
         height: 800px;
         left: 40%;
     }
 
-    .bubble2 {
+    .hero .bubble2 {
         width: 150px;
         height: 150px;
     }
 
-    .bubble3 {
+    .hero .bubble3 {
         width: 50px;
         height: 50px;
         left: -10px;
@@ -202,7 +202,7 @@ p.description {
 }
 
 @media (max-width: 1200px) {
-    .bubble1 {
+    .hero .bubble1 {
         left: 35%;
     }
     .information {
@@ -230,20 +230,20 @@ p.description {
 }
 
 @media (max-width: 768px) {
-    .bubble1 {
+    .hero .bubble1 {
         left: 0;
         right: -400px;
         bottom: -400px;
     }
 
-    .bubble2 {
+    .hero .bubble2 {
         display: none;
     }
 
-    .bubble3 {
+    .hero .bubble3 {
         display: none;
     }
-    .personal-design {
+    .hero .personal-design {
         display: none;
     }
 

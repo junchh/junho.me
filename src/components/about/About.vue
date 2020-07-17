@@ -1,5 +1,8 @@
 <template>
     <section class="about">
+        <div class="bubble1"></div>
+        <div class="bubble2"></div>
+        <div class="bubble3"></div>
         <div class="about-title">
             <div class="about-title-text">
                 <h1>About Me</h1>
@@ -43,7 +46,42 @@ section.about {
     z-index: 5;
     background-color: #FFFFFF;
     position: absolute;
+    overflow: hidden;
 }
+
+.about .bubble1 {
+    background-color: #F3F3FF;
+    height: 200px;
+    width: 200px;
+    border-radius: 450px;
+    top: -80px;
+    right: -80px;
+    z-index: -1;
+    position: absolute;
+}
+
+.about .bubble2 {
+    background-color: #F3F3FF;
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+    left: -20px;
+    bottom: -20px;
+    z-index: -1;
+    position: absolute;
+}
+
+.about .bubble3 {
+    background-color: #F3F3FF;
+    height: 70px;
+    width: 70px;
+    border-radius: 40px;
+    left: -20px;
+    bottom: 210px;
+    z-index: -1;
+    position: absolute;
+}
+
 .about-title {
     margin-top: 50px;
 }
@@ -138,6 +176,48 @@ section.about {
 
     .about-information {
         max-width: 400px;
+    }
+}
+
+@media (max-width: 768px){
+    .about .bubble2 {
+        left: auto;
+        right: -10px;
+    }
+
+    .about .bubble3 {
+        left: auto;
+        right: -10px;
+    }
+}
+
+@media (max-width: 500px){
+    .about-picture img {
+        width: 100vw;
+    }
+
+    .about-information {
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .about-title-text h1:hover ~ .about-line {
+        width: 160px;
+    }
+
+    .about-title-text h1 {
+        font-family: 'Rubik', sans-serif;
+        font-size: 3.2rem;
+        font-weight: 300;
+    }
+
+    .about-information .greeting {
+        font-size: 2.2rem;
+    }   
+
+    .about-information p {
+        font-size: 1.7rem;
     }
 }
 </style>
