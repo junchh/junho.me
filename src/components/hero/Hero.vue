@@ -20,7 +20,7 @@
             caret-animation='blink'
             ></vue-typer>
             <p class="description">I’m a computer science student who occasionally listen to music while turning melody into fully functional and reusable component.</p>
-            <a href="#" class="btn-cv">Download CV</a>
+            <router-link class="btn-cv" to="/about">About Me</router-link>
             <div class="icons">
                 <a class="icon-item" href="#"><i class="fab fa-linkedin"></i></a>
                 <a class="icon-item" href="#"><i class="fab fa-github"></i></a>
