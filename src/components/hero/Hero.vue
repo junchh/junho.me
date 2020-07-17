@@ -11,7 +11,7 @@
             :repeat='Infinity'
             :shuffle='false'
             initial-action='typing'
-            :pre-type-delay='100'
+            :pre-type-delay='500'
             :type-delay='100'
             :pre-erase-delay='2000'
             :erase-delay='200'

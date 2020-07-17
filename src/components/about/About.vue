@@ -14,7 +14,11 @@
                 <img src="@/assets/images/about-profile.jpg"/>
             </div>
             <div class="about-information">
-                <h2 class="greeting">Hi I'm Junho</h2>
+                <h2 v-on:mouseover="hoverGreeting" v-on:mouseout="hoverGreeting" class="greeting">Hi I'm Junho
+                    <transition name="fade">
+                        <span v-if="greetingHover">Choi Hedyatmo</span>
+                    </transition>
+                    </h2>
                 <p>
                     I’m an Informatics student at Bandung Institute of Technology (ITB). I love to write, code, and listen to music.
                 
@@ -23,7 +27,6 @@
                 <p>
                     I’m mainly interested in backend development although I also love playing around with javascript in frontend and creating interactive UI / UX. 
                 </p>
-
                 <div class="contact-links">
                     <a class="rounded-icon" href="#"><i class="fab fa-linkedin"></i></a>
                     <a class="rounded-icon" href="#"><i class="fab fa-linkedin"></i></a>
@@ -36,10 +39,38 @@
 
 <script>
     export default {
+        data: function(){
+            return {
+                greetingHover: false
+            }
+        },
+        methods: {
+            hoverGreeting(){
+                this.greetingHover = !this.greetingHover
+            }
+        }
     }
 </script>
 
 <style>
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 0.4s ease-in;
+}
+.fade-enter-to {
+  opacity: 0.9;
+}
+.fade-leave {
+  opacity: 0.9;
+}
+.fade-leave-active {
+  transition: opacity 0.4s ease-in;
+}
+.fade-leave-to {
+  opacity: 0;
+}
 section.about {
     min-height: 100vh;
     width: 100vw;
