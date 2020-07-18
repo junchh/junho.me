@@ -20,7 +20,7 @@
             return {
                 menuShown: false,
                 stillScrolling: false,
-                hierarchy: ["/", "/about", "/projects"],
+                hierarchy: ["/", "/about", "/projects", "/blogs"],
                 touchY: 0,
                 transitionName: ''
             }
@@ -44,8 +44,8 @@
                     if(delta > 0){
                         console.log('bawah')
                         nextIndex++
-                        if(nextIndex === 3){
-                            nextIndex = 2
+                        if(nextIndex === 4){
+                            nextIndex = 3
                         }
                     } else {
                         console.log('atas')

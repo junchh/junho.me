@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Hero from '../components/hero/Hero.vue'
 import About from '../components/about/About.vue'
 import Projects from '../components/projects/Projects.vue'
+import BlogPreview from '../components/blog/BlogPreview.vue'
 
 Vue.use(VueRouter)
 
@@ -30,6 +31,14 @@ Vue.use(VueRouter)
       title: 'My Projects'
     },
     component: Projects
+  },
+  {
+    path: '/blogs',
+    name: 'BlogPreview',
+    meta: {
+      title: 'My Blog Posts'
+    },
+    component: BlogPreview
   }
 ]
 
