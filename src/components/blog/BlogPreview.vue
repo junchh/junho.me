@@ -1,5 +1,5 @@
 <template>
-  <section class="blogpreview">
+    <section class="blogpreview">
         <div class="bubble1"></div>
         <div class="bubble2"></div>
         <div class="bubble3"></div>
@@ -53,11 +53,16 @@
                 </div>
             </div>
         </div>
+    <footer-comp></footer-comp>
     </section>
 </template>
 
 <script>
+    import FooterComp from '../footer/Footer.vue'
     export default {
+        components: {
+            FooterComp
+        }
     }
 </script>
 
