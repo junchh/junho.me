@@ -181,7 +181,32 @@
 }
 
 @media (max-width: 1100px){
+    .posts-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, 50%);
+    }
 
+    .post {
+        width: 90%;
+    }
+
+    .post-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px){
+    .posts-grid {
+        grid-template-columns: 100%;
+    }
+
+    .post-item {
+        margin-bottom: 80px;
+    }
+
+    .post {
+        width: 80%;
+    }
 }
 
 @media (max-width: 500px){
