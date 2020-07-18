@@ -9,6 +9,40 @@
                 <div class="projects-line"></div>
             </div>
         </div>
+        <div class="projects-content">
+            <div class="projects-grid">
+                <div class="project-item">
+                    <img class="project-image" src="@/assets/images/stock-image.jpg" />
+                </div>
+                <div class="project-item">
+                    <img class="project-image" src="@/assets/images/about-profile.jpg" />
+                </div>
+                 <div class="project-item">
+                    <img class="project-image" src="@/assets/images/stock-image.jpg" />
+                </div>
+                <div class="project-item">
+                    <img class="project-image" src="@/assets/images/about-profile.jpg" />
+                </div>
+                <div class="project-item">
+                    heya
+                </div>
+                <div class="project-item">
+                    heya
+                </div>
+                <div class="project-item">
+                    heya
+                </div>
+                <div class="project-item">
+                    heya
+                </div>
+                <div class="project-item">
+                    heya
+                </div>
+                <div class="project-item">
+                    heya
+                </div>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -86,5 +120,68 @@
     height: 3px;
     background-color: #000000;
     transition: width 0.2s;
+}
+
+.projects-content {
+    width: 100vw;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-grid {
+    width: 900px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-gap: 20px 10px;
+}
+
+.project-item {
+    width: 280px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image {
+    cursor: pointer;
+    filter: brightness(60%);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+    transform: scale(1);
+}
+
+.project-image:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 1000px){
+
+    .projects-content {
+        margin-top: 100px;
+    }
+    .projects-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .project-item {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px){
+    .projects-grid {
+        grid-template-columns: 100%;
+    }
+
+    .project-item {
+        width: 100%;
+        height: 280px;
+    }
 }
 </style>
