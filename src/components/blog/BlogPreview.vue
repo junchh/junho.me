@@ -14,7 +14,7 @@
                 <div class="post-item">
                     <div class="post">
                         <img class="post-image" src="@/assets/images/stock1.jpg" />
-                        <h1>Runaway a Road Adventure</h1> 
+                        <h1>Creating Cascading Pages like pagePiling.js from scratch with Vue</h1> 
                         <h2>May 6, 2015</h2>
                         <p>
     We circled for some time without doing much damage on either side; the long, straight, needle-like swords flashing in the sunlight, and ringing ...
@@ -156,14 +156,15 @@
 
 .post h1 {
     margin-top: 16px;
+    line-height: 20px;
     font-size: 14px;
     text-transform: uppercase;
-    color: #585858;
+    color: #3d3d61;
 }
 
 .post h2 {
     margin-top: 10px;
-    color: #DAD8D1;
+    color: #b8b8d3;
     font-size: 12px;
     text-transform: uppercase;
 }
@@ -173,7 +174,7 @@
     font-family: 'Droid Serif', Georgia, serif;
     font-size: 15px;
     line-height: 24px;
-    color: #585858;
+    color: #56566b;
 }
 
 .post-image {
