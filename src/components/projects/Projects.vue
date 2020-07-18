@@ -13,6 +13,9 @@
             <div class="projects-grid">
                 <div class="project-item">
                     <img class="project-image" src="@/assets/images/stock-image.jpg" />
+                    <div class="project-title">
+                        <span><i class="fa fa-search-plus" aria-hidden="true"></i></span>
+                    </div>
                 </div>
                 <div class="project-item">
                     <img class="project-image" src="@/assets/images/about-profile.jpg" />
@@ -138,26 +141,52 @@
 }
 
 .project-item {
+    cursor: pointer;
     width: 280px;
     height: 200px;
     position: relative;
     overflow: hidden;
+    text-align: center;
+    color:purple;
 }
 
 .project-image {
-    cursor: pointer;
+
     filter: brightness(60%);
     height: 100%;
     width: 100%;
     object-fit: cover;
+    z-index: 1;
     transition: all 0.3s;
     transform: scale(1);
 }
 
-.project-image:hover {
+
+.project-title {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title span {
+    font-size: 50px;
+    color: #FFFFFF;
+    opacity: 0%;
+    transition: all 0.3s;
+}
+
+.project-item:hover .project-image {
     transform: scale(1.2);
 }
 
+.project-item:hover .project-title span {
+    display: inline;
+    opacity: 70%;
+}
 @media (max-width: 1000px){
 
     .projects-content {
@@ -182,6 +211,18 @@
     .project-item {
         width: 100%;
         height: 280px;
+    }
+}
+
+@media (max-width: 500px){
+    .projects-title-text h1:hover ~ .projects-line {
+        width: 160px;
+    }
+
+    .projects-title-text h1 {
+        font-family: 'Rubik', sans-serif;
+        font-size: 3.2rem;
+        font-weight: 300;
     }
 }
 </style>
