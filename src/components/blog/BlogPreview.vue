@@ -41,28 +41,18 @@
                         </p>
                     </div>
                 </div>
-                <div class="post-item">
-                    <div class="post">
-                        <img class="post-image" src="@/assets/images/stock3.jpg" />
-                        <h1>Runaway a Road Adventure</h1> 
-                        <h2>May 3, 2015</h2>
-                        <p>
-    It may comfort you to know that Fry's death took only fifteen seconds, yet the pain was so intense, that it felt to him like fifteen years.
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
-    <footer-comp></footer-comp>
+        <div class="view-blogs">
+            <router-link class="view-more-button" to="/blog">
+                View More <i class="fa fa-arrow-right" aria-hidden="true">  </i>
+            </router-link>
+        </div>
     </section>
 </template>
 
 <script>
-    import FooterComp from '../footer/Footer.vue'
     export default {
-        components: {
-            FooterComp
-        }
     }
 </script>
 
@@ -185,6 +175,36 @@
 .post-image {
     width: 300px;
 }
+
+.view-blogs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.view-more-button {
+    text-align: center;
+    width: 200px;
+    background-color: transparent;
+    border: 3px solid #000000;
+    color: #000000;
+    padding: 12px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.view-more-button:hover {
+    color: #FFFFFF;
+    background-color: #D3D3F5;
+    border-color: #D3D3F5;
+}
+
+.view-more-button:focus {
+    outline: none;
+}
+
+
 
 @media (max-width: 1100px){
     .posts-grid {

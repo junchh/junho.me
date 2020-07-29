@@ -5,7 +5,7 @@
         </transition>
         <Header v-on:menuShownUpdated="updateMenuShown"></Header>
         <transition :name="transitionName" mode="in-out">
-                <router-view/>
+                <router-view />
         </transition>
     </div>
 </template>
@@ -39,16 +39,12 @@
                 if(!this.stillScrolling){
                     const path = router.currentRoute.path
                     let nextIndex = this.hierarchy.indexOf(path)
-                    console.log(path)
-                    console.log(nextIndex)
                     if(delta > 0){
-                        console.log('bawah')
                         nextIndex++
                         if(nextIndex === 4){
                             nextIndex = 3
                         }
                     } else {
-                        console.log('atas')
                         nextIndex--
                         if(nextIndex === -1){
                             nextIndex = 0
@@ -57,6 +53,7 @@
                     if(this.hierarchy[nextIndex] != path){
                         if((delta > 0 && bottomOfWindow) || (delta <= 0 && topOfWindow)){
                             router.push(this.hierarchy[nextIndex])
+                            window.scrollTo(0, 0)
                         }
                         this.stillScrolling = true
                         setTimeout(function(){

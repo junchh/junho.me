@@ -1,12 +1,14 @@
 <template>
     <footer>
-        <h1>HOME</h1>
-        <div class="icons">
-
+        <div class="footer-icons">
+            <a class="footer-icon-item" href="#"><i class="fab fa-linkedin"></i></a>
+            <a class="footer-icon-item" href="#"><i class="fab fa-github"></i></a>
         </div>
-        <p>
-            &copy; Copyright 2020. Junho Choi
-        </p>
+        <div class="copyright-text">
+            <p>
+                &copy; 2020 All rights reserved.
+            </p>
+        </div>
     </footer>
 </template>
 
@@ -17,8 +19,5 @@ export default {
 </script>
 
 <style>
-footer {
-    width: 100%;
-    background-color: purple;
-}
+
 </style>
