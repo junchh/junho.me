@@ -45,8 +45,13 @@
         </div>
         <div class="view-blogs">
             <router-link class="view-more-button" to="/blog">
-                View More <i class="fa fa-arrow-right" aria-hidden="true">  </i>
+                View More <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </router-link>
+        </div>
+        <div class="footer">
+            <p>
+                &copy; 2020 <a class="footer-link" href="#">Junho</a>. All rights reserved.
+            </p>
         </div>
     </section>
 </template>
@@ -202,6 +207,23 @@
 
 .view-more-button:focus {
     outline: none;
+}
+
+.footer {
+    margin-top: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    padding: 20px;
+}
+
+.footer-link {
+    color: #a0a0c9;
+}
+
+.footer-link:hover {
+    color: #D3D3F5;
 }
 
 
