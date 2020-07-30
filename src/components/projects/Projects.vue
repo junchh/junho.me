@@ -1,8 +1,8 @@
 <template>
   <section class="projects">
-        <div class="bubble1"></div>
-        <div class="bubble2"></div>
-        <div class="bubble3"></div>
+        <div class="bubble1 animate__animated animate__slideInRight"></div>
+        <div class="bubble2 animate__animated animate__zoomInDown"></div>
+        <div class="bubble3 animate__animated animate__zoomInDown"></div>
         <div class="projects-title">
             <div class="projects-title-text">
                 <h1>Portfolio</h1>

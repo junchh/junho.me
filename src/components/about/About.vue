@@ -1,36 +1,36 @@
 <template>
     <section class="about">
-        <div class="bubble1"></div>
-        <div class="bubble2"></div>
-        <div class="bubble3"></div>
-        <div class="about-title">
+        <div class="bubble1 animate__animated animate__slideInRight"></div>
+        <div class="bubble2 animate__animated animate__zoomInDown"></div>
+        <div class="bubble3 animate__animated animate__zoomInDown"></div>
+        <div class="about-title animate__animated animate__fadeIn">
             <div class="about-title-text">
                 <h1>About Me</h1>
                 <div class="about-line"></div>
             </div>
         </div>
         <div class="about-content">
-            <div class="about-picture">
+            <div class="about-picture animate__animated animate__fadeInDown">
                 <img src="@/assets/images/about-profile.jpg"/>
             </div>
             <div class="about-information">
-                <h2 v-on:mouseover="hoverGreeting" v-on:mouseout="hoverGreeting" class="greeting">Hi I'm Junho
+                <h2 v-on:mouseover="hoverGreeting" v-on:mouseout="hoverGreeting" class="greeting animate__animated animate__slideInRight">Hi I'm Junho
                     <transition name="fade">
                         <span v-if="greetingHover">Choi Hedyatmo</span>
                     </transition>
                     </h2>
-                <p>
+                <p class="animate__animated animate__slideInRight animate__fast">
                     I’m an Informatics student at Bandung Institute of Technology (ITB). I love to write, code, and listen to music.
                 
                 </p>
                 <br>
-                <p>
+                <p class="animate__animated animate__slideInRight animate__faster">
                     I’m mainly interested in backend development although I also love playing around with javascript in frontend and creating interactive UI / UX. 
                 </p>
                 <div class="contact-links">
-                    <a class="rounded-icon" href="#"><i class="fab fa-linkedin"></i></a>
-                    <a class="rounded-icon" href="#"><i class="fab fa-linkedin"></i></a>
-                    <a class="rounded-icon" href="#"><i class="fab fa-linkedin"></i></a>
+                    <a class="rounded-icon animate__animated animate__fadeInBottomRight" href="#"><i class="fab fa-linkedin"></i></a>
+                    <a class="rounded-icon animate__animated animate__fadeInBottomRight" href="#"><i class="fab fa-linkedin"></i></a>
+                    <a class="rounded-icon animate__animated animate__fadeInBottomRight" href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>

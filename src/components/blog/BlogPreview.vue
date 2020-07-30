@@ -1,8 +1,8 @@
 <template>
     <section class="blogpreview">
-        <div class="bubble1"></div>
-        <div class="bubble2"></div>
-        <div class="bubble3"></div>
+        <div class="bubble1 animate__animated animate__slideInRight"></div>
+        <div class="bubble2 animate__animated animate__zoomInDown"></div>
+        <div class="bubble3 animate__animated animate__zoomInDown"></div>
         <div class="blogpreview-title">
             <div class="blogpreview-title-text">
                 <h1>My Blogs</h1>

@@ -1,32 +1,34 @@
 <template>
 
     <section @wheel="handleScroll" class="hero">
-        <div class="bubble1"></div>
-        <div class="bubble2"></div>
-        <div class="bubble3"></div>
+        <div class="bubble1 animate__animated animate__rollIn"></div>
+        <div class="bubble2 animate__animated animate__zoomInDown"></div>
+        <div class="bubble3 animate__animated animate__zoomInDown"></div>
         <div class="information">
-            <h1 class="title">Junho Choi</h1>
-            <vue-typer
-            :text='["A Student.", "A Web Developer.","A Writer."]'
-            :repeat='Infinity'
-            :shuffle='false'
-            initial-action='typing'
-            :pre-type-delay='500'
-            :type-delay='100'
-            :pre-erase-delay='2000'
-            :erase-delay='200'
-            erase-style='backspace'
-            :erase-on-complete='false'
-            caret-animation='blink'
-            ></vue-typer>
-            <p class="description">I’m a computer science student who occasionally listen to music while turning melody into fully functional and reusable component.</p>
-            <router-link class="btn-cv" to="/about">About Me</router-link>
+            <h1 class="title animate__animated animate__slideInLeft">Junho Choi</h1>
+            <div class="animate__animated animate__bounceInDown">
+                <vue-typer
+                :text='["A Student.", "A Web Developer.","A Writer."]'
+                :repeat='Infinity'
+                :shuffle='false'
+                initial-action='typing'
+                :pre-type-delay='500'
+                :type-delay='100'
+                :pre-erase-delay='2000'
+                :erase-delay='200'
+                erase-style='backspace'
+                :erase-on-complete='false'
+                caret-animation='blink'
+                ></vue-typer>
+            </div>
+            <p class="description animate__animated animate__slideInLeft">I’m a computer science student who occasionally listen to music while turning melody into fully functional and reusable component.</p>
+            <router-link class="btn-cv animate__animated animate__fadeInDown" to="/about">About Me</router-link>
             <div class="icons">
-                <a class="icon-item" href="#"><i class="fab fa-linkedin"></i></a>
-                <a class="icon-item" href="#"><i class="fab fa-github"></i></a>
+                <a class="icon-item animate__animated animate__fadeIn" href="#"><i class="fab fa-linkedin"></i></a>
+                <a class="icon-item animate__animated animate__fadeIn" href="#"><i class="fab fa-github"></i></a>
             </div>
         </div>
-        <div class="personal-design">
+        <div class="personal-design animate__animated animate__slideInRight">
             <img src="@/assets/images/personal-design.png">
         </div>
     </section>
