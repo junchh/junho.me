@@ -3,7 +3,7 @@
         <div class="bubble1 animate__animated animate__slideInRight"></div>
         <div class="bubble2 animate__animated animate__zoomInDown"></div>
         <div class="bubble3 animate__animated animate__zoomInDown"></div>
-        <div class="projects-title">
+        <div class="projects-title animate__animated animate__fadeIn">
             <div class="projects-title-text">
                 <h1>Portfolio</h1>
                 <div class="projects-line"></div>
@@ -11,37 +11,37 @@
         </div>
         <div class="projects-content">
             <div class="projects-grid">
-                <div class="project-item">
+                <div class="project-item animate__animated animate__fadeInDown">
                     <img class="project-image" src="@/assets/images/stock-image.jpg" />
                     <div class="project-title">
                         <span><i class="fa fa-search-plus" aria-hidden="true"></i></span>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item animate__animated animate__fadeInDown">
                     <img class="project-image" src="@/assets/images/about-profile.jpg" />
                 </div>
-                 <div class="project-item">
+                 <div class="project-item animate__animated animate__fadeInDown">
                     <img class="project-image" src="@/assets/images/stock-image.jpg" />
                 </div>
-                <div class="project-item">
+                <div class="project-item animate__animated animate__fadeInDown">
                     <img class="project-image" src="@/assets/images/about-profile.jpg" />
                 </div>
-                <div class="project-item">
+                <div class="project-item animate__animated animate__fadeInDown">
                     heya
                 </div>
-                <div class="project-item">
+                <div class="project-item animate__animated animate__fadeInDown">
                     heya
                 </div>
-                <div class="project-item">
+                <div class="project-item animate__animated animate__fadeInDown">
                     heya
                 </div>
-                <div class="project-item">
+                <div class="project-item animate__animated animate__fadeInDown">
                     heya
                 </div>
-                <div class="project-item">
+                <div class="project-item animate__animated animate__fadeInDown">
                     heya
                 </div>
-                <div class="project-item">
+                <div class="project-item animate__animated animate__fadeInDown">
                     heya
                 </div>
             </div>

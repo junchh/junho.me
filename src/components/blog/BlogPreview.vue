@@ -11,7 +11,7 @@
         </div>
         <div class="posts-container">
             <div class="posts-grid"> 
-                <div class="post-item">
+                <div class="post-item animate__animated animate__fadeInDown animate__faster">
                     <div class="post">
                         <img class="post-image" src="@/assets/images/stock1.jpg" />
                         <h1>Creating Cascading Pages like pagePiling.js from scratch with Vue</h1> 
@@ -21,7 +21,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="post-item">
+                <div class="post-item animate__animated animate__fadeInDown animate__fast">
                     <div class="post">
                         <img class="post-image" src="@/assets/images/stock2.jpg" />
                         <h1>All in Our Head</h1> 
@@ -31,7 +31,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="post-item">
+                <div class="post-item animate__animated animate__fadeInDown">
                     <div class="post">
                         <img class="post-image" src="@/assets/images/stock3.jpg" />
                         <h1>Runaway a Road Adventure</h1> 
@@ -44,11 +44,11 @@
             </div>
         </div>
         <div class="view-blogs">
-            <router-link class="view-more-button" to="/blog">
+            <router-link class="view-more-button animate__animated animate__fadeInDown" to="/blog">
                 View More <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </router-link>
         </div>
-        <div class="footer">
+        <div class="footer animate__animated animate__fadeIn">
             <p>
                 &copy; 2020 <a class="footer-link" href="#">Junho</a>. All rights reserved.
             </p>
