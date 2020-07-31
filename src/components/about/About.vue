@@ -11,26 +11,26 @@
         </div>
         <div class="about-content">
             <div class="about-picture animate__animated animate__fadeInDown">
-                <v-lazy-image :src="require('../../assets/images/about-profile.jpg')"/>
+                <v-lazy-image :src-placeholder="require('../../assets/images/about-profile-placeholder.jpg')" :src="require('../../assets/images/about-profile.jpg')"/>
             </div>
             <div class="about-information">
-                <h2 v-on:mouseover="hoverGreeting" v-on:mouseout="hoverGreeting" class="greeting animate__animated animate__slideInRight">Hi I'm Junho
+                <h2 v-on:mouseover="hoverGreeting" v-on:mouseout="hoverGreeting" class="greeting animate__animated animate__fadeInUp">Hi I'm Junho
                     <transition name="fade">
                         <span v-if="greetingHover">Choi Hedyatmo</span>
                     </transition>
                     </h2>
-                <p class="animate__animated animate__slideInRight animate__fast">
+                <p class="animate__animated animate__fadeInUp animate__fast">
                     I’m an Informatics student at Bandung Institute of Technology (ITB). I love to write, code, and listen to music.
                 
                 </p>
                 <br>
-                <p class="animate__animated animate__slideInRight animate__faster">
+                <p class="animate__animated animate__fadeInUp animate__faster">
                     I’m mainly interested in backend development although I also love playing around with javascript in frontend and creating interactive UI / UX. 
                 </p>
                 <div class="contact-links">
-                    <a class="rounded-icon animate__animated animate__fadeInBottomRight" href="#"><i class="fab fa-linkedin"></i></a>
-                    <a class="rounded-icon animate__animated animate__fadeInBottomRight" href="#"><i class="fab fa-linkedin"></i></a>
-                    <a class="rounded-icon animate__animated animate__fadeInBottomRight" href="#"><i class="fab fa-linkedin"></i></a>
+                    <a class="rounded-icon animate__animated animate__fadeInBottom" href="#"><i class="fab fa-linkedin"></i></a>
+                    <a class="rounded-icon animate__animated animate__fadeInBottom" href="#"><i class="fab fa-linkedin"></i></a>
+                    <a class="rounded-icon animate__animated animate__fadeInBottom" href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>

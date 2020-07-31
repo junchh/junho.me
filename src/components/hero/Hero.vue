@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="personal-design animate__animated animate__slideInRight">
-            <v-lazy-image :src="require('../../assets/images/personal-design.png')" />
+            <v-lazy-image :src-placeholder="require('../../assets/images/personal-design-placeholder.jpg')" :src="require('../../assets/images/personal-design.png')" />
         </div>
     </section>
 </template>
