@@ -3,7 +3,7 @@
         <transition name="fade">
             <Menu v-if="menuShown" v-on:menuShownUpdated="updateMenuShown"></Menu>
         </transition>
-        <Header v-on:menuShownUpdated="updateMenuShown"></Header>
+        <Header :status="menuShown" v-on:menuShownUpdated="updateMenuShown"></Header>
         <transition :name="transitionName" mode="in-out">
                 <router-view />
         </transition>
@@ -131,7 +131,7 @@ a {
   opacity: 0;
 }
 .fade-enter-active {
-  transition: opacity 0.4s ease-in;
+  transition: opacity 0.2s ease-in;
 }
 .fade-enter-to {
   opacity: 0.9;
@@ -140,7 +140,7 @@ a {
   opacity: 0.9;
 }
 .fade-leave-active {
-  transition: opacity 0.4s ease-in;
+  transition: opacity 0.2s ease-in;
 }
 .fade-leave-to {
   opacity: 0;
@@ -151,20 +151,20 @@ a {
     transform: translateY(0);
 }
 .slide-down-leave-active {
-  transition: transform 0.8s;
+    transition: transform 0.8s;
 }
 .slide-down-leave-to {
-  transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 .slide-up-enter {
     transform: translateY(-100%);
 }
 .slide-up-enter-active {
-  transition: transform 0.8s;
+    transition: transform 0.8s;
 }
 .slide-up-enter-to {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 header {

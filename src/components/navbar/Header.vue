@@ -1,17 +1,20 @@
 <template>
     <header>
         <nav>
-            <div v-on:click="triggerMenu" id="menu-button" class="hamburger">
-                <div class="hamburger-line animate__animated animate__rollIn"></div>
-                <div class="hamburger-line animate__animated animate__rollIn animate__fast"></div>
-                <div class="hamburger-line animate__animated animate__rollIn animate__faster"></div>
-            </div>
+            <transition name="menuView">
+                <div v-show="!status" v-on:click="triggerMenu" id="menu-button" class="hamburger">
+                    <div class="hamburger-line animate__animated animate__rollIn"></div>
+                    <div class="hamburger-line animate__animated animate__rollIn animate__fast"></div>
+                    <div class="hamburger-line animate__animated animate__rollIn animate__faster"></div>
+                </div>
+            </transition>
         </nav>
     </header>
 </template>
 
 <script>
 export default {
+    props: ['status'],
     methods: {
         triggerMenu(){
             this.$emit('menuShownUpdated')

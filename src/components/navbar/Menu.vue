@@ -1,7 +1,7 @@
 <template>
 <ul class="nav-list">
     <div v-on:click="triggerMenu" class="close-btn">
-        <i class="fas fa-times"></i>
+        &times;
     </div>
     <li class="nav-item">
         <router-link class="nav-link" to="/">
@@ -16,22 +16,16 @@
         </router-link>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link">
-            Experience
+        <router-link class="nav-link" to="/projects">
+            Portfolio
             <div class="slider"></div>
-        </a>
+        </router-link>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link">
+        <router-link class="nav-link" to="/blogs">
             Blog
             <div class="slider"></div>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a href="#" class="nav-link">
-            Contact Me
-            <div class="slider"></div>    
-        </a>
+        </router-link>
     </li>
 </ul>
 </template>
@@ -51,6 +45,19 @@ ul {
     list-style: none;
 }
 
+.close-btn {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 70px;
+    text-align: center;
+    line-height: 35px;
+    z-index: 25;
+    color: #FFFFFF;
+}
 .nav-list {
     width: 100vw;
     height: 100vh;

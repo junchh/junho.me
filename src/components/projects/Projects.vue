@@ -35,15 +35,6 @@
                 <div class="project-item animate__animated animate__fadeInDown">
                     heya
                 </div>
-                <div class="project-item animate__animated animate__fadeInDown">
-                    heya
-                </div>
-                <div class="project-item animate__animated animate__fadeInDown">
-                    heya
-                </div>
-                <div class="project-item animate__animated animate__fadeInDown">
-                    heya
-                </div>
             </div>
         </div>
     </section>
