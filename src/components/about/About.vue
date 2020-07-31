@@ -11,7 +11,7 @@
         </div>
         <div class="about-content">
             <div class="about-picture animate__animated animate__fadeInDown">
-                <img src="@/assets/images/about-profile.jpg"/>
+                <v-lazy-image :src="require('../../assets/images/about-profile.jpg')"/>
             </div>
             <div class="about-information">
                 <h2 v-on:mouseover="hoverGreeting" v-on:mouseout="hoverGreeting" class="greeting animate__animated animate__slideInRight">Hi I'm Junho

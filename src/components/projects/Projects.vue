@@ -12,19 +12,19 @@
         <div class="projects-content">
             <div class="projects-grid">
                 <div class="project-item animate__animated animate__fadeInDown">
-                    <img class="project-image" src="@/assets/images/stock-image.jpg" />
+                    <v-lazy-image class="project-image" :src="require('../../assets/images/stock-image.jpg')" />
                     <div class="project-title">
                         <span><i class="fa fa-search-plus" aria-hidden="true"></i></span>
                     </div>
                 </div>
                 <div class="project-item animate__animated animate__fadeInDown">
-                    <img class="project-image" src="@/assets/images/about-profile.jpg" />
+                    <v-lazy-image class="project-image" :src="require('../../assets/images/about-profile.jpg')" />
                 </div>
                  <div class="project-item animate__animated animate__fadeInDown">
-                    <img class="project-image" src="@/assets/images/stock-image.jpg" />
+                    <v-lazy-image class="project-image" :src="require('../../assets/images/stock-image.jpg')" />
                 </div>
                 <div class="project-item animate__animated animate__fadeInDown">
-                    <img class="project-image" src="@/assets/images/about-profile.jpg" />
+                    <v-lazy-image class="project-image" :src="require('../../assets/images/about-profile.jpg')" />
                 </div>
                 <div class="project-item animate__animated animate__fadeInDown">
                     heya

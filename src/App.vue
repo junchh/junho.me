@@ -119,6 +119,14 @@ a {
     text-decoration: none;
 }
 
+.v-lazy-image {
+  opacity: 0;
+  transition: opacity 2s;
+}
+.v-lazy-image-loaded {
+  opacity: 1;
+}
+
 .fade-enter {
   opacity: 0;
 }

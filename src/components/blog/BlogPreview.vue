@@ -13,7 +13,7 @@
             <div class="posts-grid"> 
                 <div class="post-item animate__animated animate__fadeInDown animate__faster">
                     <div class="post">
-                        <img class="post-image" src="@/assets/images/stock1.jpg" />
+                        <v-lazy-image class="post-image" :src="require('../../assets/images/stock1.jpg')" />
                         <h1>Creating Cascading Pages like pagePiling.js from scratch with Vue</h1> 
                         <h2>May 6, 2015</h2>
                         <p>
@@ -23,7 +23,7 @@
                 </div>
                 <div class="post-item animate__animated animate__fadeInDown animate__fast">
                     <div class="post">
-                        <img class="post-image" src="@/assets/images/stock2.jpg" />
+                        <v-lazy-image class="post-image" :src="require('../../assets/images/stock2.jpg')" />
                         <h1>All in Our Head</h1> 
                         <h2>May 5, 2015</h2>
                         <p>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="post-item animate__animated animate__fadeInDown">
                     <div class="post">
-                        <img class="post-image" src="@/assets/images/stock3.jpg" />
+                        <v-lazy-image class="post-image" :src="require('../../assets/images/stock3.jpg')" />
                         <h1>Runaway a Road Adventure</h1> 
                         <h2>May 3, 2015</h2>
                         <p>
