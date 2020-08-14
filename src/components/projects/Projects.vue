@@ -142,13 +142,12 @@
 }
 
 .project-image {
-
     filter: brightness(60%);
     height: 100%;
     width: 100%;
     object-fit: cover;
     z-index: 1;
-    transition: all 0.3s;
+    transition: all 0.3s !important;
     transform: scale(1);
 }
 
