@@ -4,6 +4,7 @@
         "title": "Dummy",
         "description": "This was an attempt to create a social media with PHP and bootstrap 3, 4 years ago. I was a bit busy with school so the only thing I could get done was the HTML design (made with bootstrap 3).",
         "technologies": ["Bootstrap 3", "HTML5", "CSS3", "Javascript"],
+        "links": [["Live demo", "#"], ["View source code"]],
         "image": "placeholder.png"
     },
     {
@@ -11,6 +12,7 @@
         "title": "Heyyss",
         "description": "This was an attempt to create a social media with PHP and bootstrap 3, 4 years ago. I was a bit busy with school so the only thing I could get done was the HTML design (made with bootstrap 3).",
         "technologies": ["MongoDB"],
+        "links": [],
         "image": "placeholder.png"
     }
 ]

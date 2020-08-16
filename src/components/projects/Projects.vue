@@ -13,8 +13,9 @@
                     <h1>Overview</h1>
                     <p>{{projects[curId].description}}</p>
                     <div class="projectview-links">
-                        <a href="#">Live Demo</a>
-                        <a href="#">View Source Code</a>
+                        <a v-for="item in projects[curId].links" :key="item[0]" :href="item[1]">
+                            {{item[0]}}
+                        </a>
                     </div>
                     <h1>Technologies used</h1>
                     <ul>
@@ -41,20 +42,11 @@
         </div>
         <div class="projects-content">
             <div class="projects-grid">
-                <div id="0" v-on:click="getProject" class="project-item animate__animated animate__fadeInDown">
-                    <v-lazy-image class="project-image" :src="require('../../assets/images/stock-image.jpg')" />
+                <div v-for="item in projects" :key="item.id" :id="item.id" v-on:click="getProject" class="project-item animate__animated animate__fadeInDown">
+                    <v-lazy-image class="project-image" :src="require('../../assets/images/projects/' + item.image)" />
                     <div class="project-title">
                         <span><i class="fa fa-search-plus" aria-hidden="true"></i></span>
                     </div>
-                </div>
-                <div id="1" v-on:click="getProject" class="project-item animate__animated animate__fadeInDown">
-                    <v-lazy-image class="project-image" :src="require('../../assets/images/about-profile.jpg')" />
-                </div>
-                <div id="2" v-on:click="getProject" class="project-item animate__animated animate__fadeInDown">
-                    <v-lazy-image class="project-image" :src="require('../../assets/images/stock-image.jpg')" />
-                </div>
-                <div id="3" v-on:click="getProject" class="project-item animate__animated animate__fadeInDown">
-                    <v-lazy-image class="project-image" :src="require('../../assets/images/about-profile.jpg')" />
                 </div>
             </div>
         </div>
