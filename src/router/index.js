@@ -39,6 +39,10 @@ Vue.use(VueRouter)
       title: 'My Blog Posts'
     },
     component: BlogPreview
+  },
+  {
+    path: '*',
+    redirect: '/'
   }
 ]
 

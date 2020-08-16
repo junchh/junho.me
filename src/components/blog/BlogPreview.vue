@@ -44,9 +44,9 @@
             </div>
         </div>
         <div class="view-blogs">
-            <router-link class="view-more-button animate__animated animate__fadeInDown" to="/blog">
+            <a class="view-more-button animate__animated animate__fadeInDown" href="/blog">
                 View More <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            </router-link>
+            </a>
         </div>
         <div class="footer animate__animated animate__fadeIn">
             <p>
