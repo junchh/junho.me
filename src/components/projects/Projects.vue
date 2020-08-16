@@ -1,33 +1,31 @@
 <template>
-
-    <div>
-    <section class="project-view" v-if="projectView">
-        <div class="container">
-            <a class="return-link" v-on:click="projectView = !projectView">← return</a>
-            <h1 class="projectview-title">{{projects[curId].title}}</h1>
-            <div class="projectview-description">
-                <div class="projectview-image">
-                    <img :src="require('../../assets/images/projects/' + projects[curId].image)" />
-                </div>
-                <div class="projectview-desc">
-                    <h1>Overview</h1>
-                    <p>{{projects[curId].description}}</p>
-                    <div class="projectview-links">
-                        <a v-for="item in projects[curId].links" :key="item[0]" :href="item[1]">
-                            {{item[0]}}
-                        </a>
+    <section class="projects">
+        <section class="project-view" v-show="projectView">
+            <div class="container">
+                <a class="return-link" v-on:click="projectView = !projectView">← return</a>
+                <h1 class="projectview-title">{{projects[curId].title}}</h1>
+                <div class="projectview-description">
+                    <div class="projectview-image">
+                        <img :src="require('../../assets/images/projects/' + projects[curId].image)" />
                     </div>
-                    <h1>Technologies used</h1>
-                    <ul>
-                        <li v-for="item in projects[curId].technologies" :key="item">
-                            {{item}}
-                        </li>
-                    </ul>
+                    <div class="projectview-desc">
+                        <h1>Overview</h1>
+                        <p>{{projects[curId].description}}</p>
+                        <div class="projectview-links">
+                            <a v-for="item in projects[curId].links" :key="item[0]" :href="item[1]">
+                                {{item[0]}}
+                            </a>
+                        </div>
+                        <h1>Technologies used</h1>
+                        <ul>
+                            <li v-for="item in projects[curId].technologies" :key="item">
+                                {{item}}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="projects" v-else>
+        </section>
         <div class="project-big">
 
         </div>
@@ -51,8 +49,6 @@
             </div>
         </div>
     </section>
-
-    </div>
 </template>
 
 <script>
@@ -212,7 +208,7 @@
 .project-view {
     min-height: 100vh;
     width: 100vw;
-    z-index: 30;
+    z-index: 5;
     background-color:#FFFFFF;
     position: absolute;
     overflow: hidden;
