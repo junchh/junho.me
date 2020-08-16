@@ -1,5 +1,35 @@
 <template>
-  <section class="projects">
+
+    <div>
+    <section class="project-view" v-if="projectView">
+        <div class="container">
+            <a class="return-link" v-on:click="projectView = !projectView">← return</a>
+            <h1 class="projectview-title">{{projects[curId].title}}</h1>
+            <div class="projectview-description">
+                <div class="projectview-image">
+                    <img :src="require('../../assets/images/projects/' + projects[curId].image)" />
+                </div>
+                <div class="projectview-desc">
+                    <h1>Overview</h1>
+                    <p>{{projects[curId].description}}</p>
+                    <div class="projectview-links">
+                        <a href="#">Live Demo</a>
+                        <a href="#">View Source Code</a>
+                    </div>
+                    <h1>Technologies used</h1>
+                    <ul>
+                        <li v-for="item in projects[curId].technologies" :key="item">
+                            {{item}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects" v-else>
+        <div class="project-big">
+
+        </div>
         <div class="bubble1 animate__animated animate__slideInRight"></div>
         <div class="bubble2 animate__animated animate__zoomInDown"></div>
         <div class="bubble3 animate__animated animate__zoomInDown"></div>
@@ -11,41 +41,50 @@
         </div>
         <div class="projects-content">
             <div class="projects-grid">
-                <div class="project-item animate__animated animate__fadeInDown">
+                <div id="0" v-on:click="getProject" class="project-item animate__animated animate__fadeInDown">
                     <v-lazy-image class="project-image" :src="require('../../assets/images/stock-image.jpg')" />
                     <div class="project-title">
                         <span><i class="fa fa-search-plus" aria-hidden="true"></i></span>
                     </div>
                 </div>
-                <div class="project-item animate__animated animate__fadeInDown">
+                <div id="1" v-on:click="getProject" class="project-item animate__animated animate__fadeInDown">
                     <v-lazy-image class="project-image" :src="require('../../assets/images/about-profile.jpg')" />
                 </div>
-                 <div class="project-item animate__animated animate__fadeInDown">
+                <div id="2" v-on:click="getProject" class="project-item animate__animated animate__fadeInDown">
                     <v-lazy-image class="project-image" :src="require('../../assets/images/stock-image.jpg')" />
                 </div>
-                <div class="project-item animate__animated animate__fadeInDown">
+                <div id="3" v-on:click="getProject" class="project-item animate__animated animate__fadeInDown">
                     <v-lazy-image class="project-image" :src="require('../../assets/images/about-profile.jpg')" />
-                </div>
-                <div class="project-item animate__animated animate__fadeInDown">
-                    heya
-                </div>
-                <div class="project-item animate__animated animate__fadeInDown">
-                    heya
-                </div>
-                <div class="project-item animate__animated animate__fadeInDown">
-                    heya
                 </div>
             </div>
         </div>
     </section>
+
+    </div>
 </template>
 
 <script>
+    import projectData from '../../assets/projectData.json'
     export default {
+        data: function(){
+            return {
+                projects: projectData,
+                curId: 0,
+                projectView: false
+            }
+        },
+        methods: {
+            getProject(e) {
+                const id = e.currentTarget.id
+                this.curId = id
+                this.projectView = true
+            }
+        }
     }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&display=swap');
 .projects {
     min-height: 100vh;
     width: 100vw;
@@ -177,6 +216,93 @@
     display: inline;
     opacity: 70%;
 }
+
+.project-view {
+    min-height: 100vh;
+    width: 100vw;
+    z-index: 30;
+    background-color:#FFFFFF;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.project-view .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.return-link {
+    cursor: pointer;
+    color: #5FB4E4;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.return-link:hover {
+    color:#71c3f3;
+}
+
+.projectview-title {
+    font-family: 'Rokkitt', serif;
+    font-size: 6rem;
+    font-weight: 300;
+    margin-bottom: 80px;
+
+    text-align: center;
+}
+
+
+.projectview-description {
+    display: flex;
+    width: 1200px;
+}
+
+.projectview-image {
+    margin-right: 80px;
+}
+
+.projectview-image img {
+    width: 700px;
+}
+
+.projectview-desc h1 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.projectview-desc p, .projectview-desc ul {
+    font-size: 1.7rem;
+    line-height: 2.7rem;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    text-align: justify;
+}
+
+.projectview-desc ul {
+    list-style-type: circle;
+    margin-left: 40px;
+}
+
+.projectview-links {
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+
+.projectview-links a {
+    margin-right: 20px;
+    font-size: 1.6rem;
+    color: #5FB4E4;
+}
+
+.projectview-links a:hover {
+    color: #71c3f3;
+}
+
+
 @media (max-width: 1000px){
 
     .projects-content {
