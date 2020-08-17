@@ -44,21 +44,23 @@
                         if(nextIndex === 4){
                             nextIndex = 3
                         }
-                    } else {
+                    } else if(delta < 0){
                         nextIndex--
                         if(nextIndex === -1){
                             nextIndex = 0
                         }
                     }
-                    if(this.hierarchy[nextIndex] != path){
-                        if((delta > 0 && bottomOfWindow) || (delta <= 0 && topOfWindow)){
-                            router.push(this.hierarchy[nextIndex])
-                            window.scrollTo(0, 0)
+                    if(delta !== 0){
+                        if(this.hierarchy[nextIndex] != path){
+                            if((delta > 0 && bottomOfWindow) || (delta <= 0 && topOfWindow)){
+                                router.push(this.hierarchy[nextIndex])
+                                window.scrollTo(0, 0)
+                            }
+                            this.stillScrolling = true
+                            setTimeout(function(){
+                                this.stillScrolling = false
+                            }.bind(this), 500)
                         }
-                        this.stillScrolling = true
-                        setTimeout(function(){
-                            this.stillScrolling = false
-                        }.bind(this), 500)
                     }
                 }
             }
