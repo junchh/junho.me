@@ -336,6 +336,7 @@
 
     .projectview-desc p {
         margin-left: 0;
+        line-height: 2.5rem;
     }
 
     .return-link {
