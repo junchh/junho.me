@@ -137,26 +137,6 @@
     position: absolute;
 }
 
-.swipe-enter {
-    transform: translateX(100%);
-}
-.swipe-enter-active {
-    transition: transform 0.8s;
-}
-.swipe-enter-to {
-    transform: translateX(0);
-}
-
-.swipe-leave {
-    transform: translateX(0);
-}
-.swipe-leave-active {
-    transition: transform 0.8s;
-}
-.swipe-leave-to {
-    transform: translateX(-100%);
-}
-
 .projects-title {
     margin-top: 50px;
 }
@@ -403,6 +383,10 @@
 @media (max-width: 500px){
     .projects-title-text h1:hover ~ .projects-line {
         width: 160px;
+    }
+
+    .projectview-links a {
+        font-size: 1.5rem;
     }
 
     .projects-title-text h1 {
