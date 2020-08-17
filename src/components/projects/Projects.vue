@@ -1,7 +1,6 @@
 <template>
-    <section v-bind:class="{yesOverflow: projectView}" class="projects">
-        <transition name="swipe">
-        <section class="project-view" v-show="projectView">
+    <section :class="{projects: !projectView, 'project-view': projectView }">
+        <div v-if="projectView">
             <div class="bubbleview1 animate__animated animate__zoomInDown"></div>
             <div class="bubbleview2 animate__animated animate__zoomInDown"></div>
             <div class="container">
@@ -28,8 +27,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        </transition>
+        </div>
+        <div v-else>
         <div class="bubble1 animate__animated animate__slideInRight"></div>
         <div class="bubble2 animate__animated animate__zoomInDown"></div>
         <div class="bubble3 animate__animated animate__zoomInDown"></div>
@@ -48,6 +47,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 </template>
@@ -358,25 +358,18 @@
         margin-left: 0;
     }
 
+    .return-link {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+
 
     .projectview-links {
         margin-bottom: 40px;
         margin-left: 20px;
     }
 
-    .projectview-links a {
-        margin-right: 20px;
-        font-size: 1.6rem;
-        color: #5FB4E4;
-    }
-
-    .projectview-links a:hover {
-        color: #71c3f3;
-    }
-
-    .yesOverflow {
-        overflow: visible;
-    }
 }
 
 
