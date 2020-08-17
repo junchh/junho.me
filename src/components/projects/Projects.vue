@@ -1,23 +1,26 @@
 <template>
-    <section class="projects">
+    <section v-bind:class="{yesOverflow: projectView}" class="projects">
+        <transition name="swipe">
         <section class="project-view" v-show="projectView">
+            <div class="bubbleview1 animate__animated animate__zoomInDown"></div>
+            <div class="bubbleview2 animate__animated animate__zoomInDown"></div>
             <div class="container">
                 <a class="return-link" v-on:click="projectView = !projectView">← return</a>
-                <h1 class="projectview-title">{{projects[curId].title}}</h1>
+                <h1 class="projectview-title animate__animated animate__fadeIn">{{projects[curId].title}}</h1>
                 <div class="projectview-description">
                     <div class="projectview-image">
-                        <img :src="require('../../assets/images/projects/' + projects[curId].image)" />
+                        <v-lazy-image class="project-image" :src="require('../../assets/images/projects/' + projects[curId].image)" />
                     </div>
                     <div class="projectview-desc">
-                        <h1>Overview</h1>
-                        <p>{{projects[curId].description}}</p>
+                        <h1 class="animate__animated animate__fadeIn">Overview</h1>
+                        <p class="animate__animated animate__fadeIn">{{projects[curId].description}}</p>
                         <div class="projectview-links">
                             <a v-for="item in projects[curId].links" :key="item[0]" :href="item[1]">
                                 {{item[0]}}
                             </a>
                         </div>
-                        <h1>Technologies used</h1>
-                        <ul>
+                        <h1 class="animate__animated animate__fadeIn">Technologies used</h1>
+                        <ul class="animate__animated animate__fadeIn">
                             <li v-for="item in projects[curId].technologies" :key="item">
                                 {{item}}
                             </li>
@@ -26,9 +29,7 @@
                 </div>
             </div>
         </section>
-        <div class="project-big">
-
-        </div>
+        </transition>
         <div class="bubble1 animate__animated animate__slideInRight"></div>
         <div class="bubble2 animate__animated animate__zoomInDown"></div>
         <div class="bubble3 animate__animated animate__zoomInDown"></div>
@@ -38,7 +39,7 @@
                 <div class="projects-line"></div>
             </div>
         </div>
-        <div class="projects-content">
+        <div v-show="!projectView" class="projects-content">
             <div class="projects-grid">
                 <div v-for="item in projects" :key="item.id" :id="item.id" v-on:click="getProject" class="project-item animate__animated animate__fadeInDown">
                     <v-lazy-image class="project-image" :src="require('../../assets/images/projects/' + item.image)" />
@@ -81,7 +82,6 @@
     position: absolute;
     overflow: hidden;
 }
-
 .projects .bubble1 {
     background-color: #F3F3FF;
     height: 200px;
@@ -113,6 +113,48 @@
     bottom: 210px;
     z-index: -1;
     position: absolute;
+}
+
+.projects .bubbleview1 {
+    background-color: #F3F3FF;
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+    right: -20px;
+    bottom: -20px;
+    z-index: -1;
+    position: absolute;
+}
+
+.projects .bubbleview2 {
+    background-color: #F3F3FF;
+    height: 70px;
+    width: 70px;
+    border-radius: 40px;
+    right: -20px;
+    bottom: 210px;
+    z-index: -1;
+    position: absolute;
+}
+
+.swipe-enter {
+    transform: translateX(100%);
+}
+.swipe-enter-active {
+    transition: transform 0.8s;
+}
+.swipe-enter-to {
+    transform: translateX(0);
+}
+
+.swipe-leave {
+    transform: translateX(0);
+}
+.swipe-leave-active {
+    transition: transform 0.8s;
+}
+.swipe-leave-to {
+    transform: translateX(-100%);
 }
 
 .projects-title {
@@ -288,6 +330,53 @@
 
 .projectview-links a:hover {
     color: #71c3f3;
+}
+
+@media screen and (max-width: 1200px) {
+    .projectview-description {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .projectview-image {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .projectview-image img {
+        width: 100%;
+    }
+
+    .projectview-desc {
+        margin-top: 50px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .projectview-desc p {
+        margin-left: 0;
+    }
+
+
+    .projectview-links {
+        margin-bottom: 40px;
+        margin-left: 20px;
+    }
+
+    .projectview-links a {
+        margin-right: 20px;
+        font-size: 1.6rem;
+        color: #5FB4E4;
+    }
+
+    .projectview-links a:hover {
+        color: #71c3f3;
+    }
+
+    .yesOverflow {
+        overflow: visible;
+    }
 }
 
 
