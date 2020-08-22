@@ -1,5 +1,5 @@
 <template>
-    <section class="about">
+    <section :style="{ 'background-image': 'url(' + this.imageUrl + ')'}" class="about">
         <div class="about-content animate__animated animate__slideInRight">
             <div class="about-description">
                 <p class="about-desc-text animate__animated animate__slideInDown">
@@ -26,7 +26,32 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        data: function() {
+            return {
+                image: '',
+                imageUrl: '',
+                styleObject: {}
+            }
+        },
+        methods: {
+            setImage() {
+                this.imageUrl = require('../../assets/images/test-background-new.jpg')
+                const img = new Image() 
+                img.onload = function() {
+                    console.log('loaded!')
+                    this.styleObject = {
+                        backgroundImage: 'url(' + this.imageUrl + ')'
+                    }
+                }
+
+                img.src = this.imageUrl
+            }
+        },
+        mounted: function() {
+            this.setImage()
+        }
+    }
 </script>
 
 <style>
@@ -35,7 +60,6 @@ section.about {
     height: 100vh;
     width: 100vw;
     z-index: 5;
-    background-image: url(~@/assets/images/test-background-new.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,6 +67,11 @@ section.about {
     background-blend-mode: lighten;
     position: absolute;
     overflow: hidden;
+
+    animation: fadein 0.15s;
+    -moz-animation: fadein 0.15s; /* Firefox */
+    -webkit-animation: fadein 0.15s; /* Safari and Chrome */
+    -o-animation: fadein 0.15s; /* Opera */
 }
 
 .about-content {
