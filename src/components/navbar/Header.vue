@@ -114,5 +114,9 @@ nav {
         padding: 0;
         padding-right: 5px;
     }
+
+    .side-indicator {
+        margin: 0;
+    }
 }
 </style>
