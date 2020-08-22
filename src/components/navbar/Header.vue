@@ -1,13 +1,11 @@
 <template>
     <header>
         <nav>
-            <transition name="menuView">
-                <div v-show="!status" v-on:click="triggerMenu" id="menu-button" class="hamburger">
-                    <div class="hamburger-line animate__animated animate__rollIn"></div>
-                    <div class="hamburger-line animate__animated animate__rollIn animate__fast"></div>
-                    <div class="hamburger-line animate__animated animate__rollIn animate__faster"></div>
-                </div>
-            </transition>
+            <div v-on:click="triggerMenu" id="menu-button" class="hamburger">
+                <div :class="{cross1: status}" class="hamburger-line"></div>
+                <div :class="{cross3: status}" class="hamburger-line"></div>
+                <div :class="{cross2: status}" class="hamburger-line"></div>
+            </div>
         </nav>
         <div class="side-indicator">
             <ul>
@@ -35,7 +33,7 @@ export default {
 header {
     z-index: 15;
     height: 100%;
-    width: 100%;
+    background-color:cadetblue;
 }
 /* Hamburger Menu */
 .hamburger {
@@ -48,9 +46,11 @@ header {
 
 .hamburger-line {
     width: 40px;
-    border-top: 3px solid #2E2A2A;
+    height: 3px;
+    background-color: #2E2A2A;
     margin-bottom: 9px;
     margin-top: 9px;
+    transition: all 0.3s;
 }
 
 /* Navbar */
@@ -85,6 +85,27 @@ nav {
 
 .side-link:hover, .router-link-exact-active {
     background-color: #2E2A2A;
+}
+
+
+
+.cross1 {
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+    width: 38px;
+    background-color: #FFF;
+    margin-bottom: 25px;
+}
+
+.cross3 {
+    display: none;
+}
+
+.cross2 {
+    transform-origin: top left;
+    transform: rotate(-45deg);
+    width: 38px;
+    background-color: #FFF;
 }
 
 @media (max-width: 500px){
