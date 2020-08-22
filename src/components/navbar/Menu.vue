@@ -46,6 +46,7 @@ ul {
 }
 
 .close-btn {
+    display: none;
     cursor: pointer;
     width: 40px;
     height: 40px;
@@ -70,7 +71,7 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 20;
+    z-index: 12;
 }
 
 .nav-item {
