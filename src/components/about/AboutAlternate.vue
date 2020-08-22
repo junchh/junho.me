@@ -18,8 +18,6 @@
                     <li class="about-link-items animate__animated animate__bounceInDown duration-1"><a href="#"><i class="fab fa-dribbble"></i></a></li>
                 </ul>
             </div>
-            <div class="about-box1 animate__animated animate__slideInLeft"></div>
-            <div class="about-box2 animate__animated animate__slideInLeft"></div>
             <div class="coding-illustration">
                 <v-lazy-image :src="require('../../assets/images/coding-illustration.png')" />
             </div>
@@ -63,7 +61,7 @@ section.about {
 
 .about-desc-text {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 3.2rem;
+    font-size: 3rem;
     line-height: 55px;
     margin-bottom: 60px;
 }
@@ -112,6 +110,7 @@ section.about {
     bottom: 0;
     right: 0;
     margin-right: 80px;
+    z-index: -1;
 }
 
 .coding-illustration > img {
@@ -134,5 +133,45 @@ section.about {
     background-color: #DEDEFF;
     bottom: 130px;
     right: 520px;
+}
+
+@media screen and (max-width: 1100px) {
+    .about-content {
+        width: 100%;
+    }
+
+    .about-description {
+        width: calc(100% - 100px);
+    }
+
+    .about-desc-text {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+
+    .about-links {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .about-desc-text {
+        font-size: 2rem;
+        line-height: 35px;
+    }
+
+    .coding-illustration { 
+        display: none;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .coding-illustration { 
+        display: none;
+    }
+
+    .about-description {
+        margin-left: 70px;
+    }
 }
 </style>
