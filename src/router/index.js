@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Hero from '../components/hero/Hero.vue'
-import About from '../components/about/About.vue'
+import AboutAlternate from '../components/about/AboutAlternate.vue'
 import Projects from '../components/projects/Projects.vue'
 import BlogPreview from '../components/blog/BlogPreview.vue'
 
@@ -20,9 +20,9 @@ Vue.use(VueRouter)
     path: '/about',
     name: 'About',
     meta: {
-      title: 'About Us'
+      title: 'About Me'
     },
-    component: About
+    component: AboutAlternate
   },
   {
     path: '/projects',
