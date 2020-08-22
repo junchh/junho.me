@@ -9,6 +9,14 @@
                 </div>
             </transition>
         </nav>
+        <div class="side-indicator">
+            <ul>
+                <li><router-link class="side-link" to="/"></router-link></li>
+                <li><router-link class="side-link" to="/about"></router-link></li>
+                <li><router-link class="side-link" to="/projects"></router-link></li>
+                <li><router-link class="side-link" to="/blogs"></router-link></li>
+            </ul>
+        </div>
     </header>
 </template>
 
@@ -26,6 +34,8 @@ export default {
 <style scoped>
 header {
     z-index: 15;
+    height: 100%;
+    width: 100%;
 }
 /* Hamburger Menu */
 .hamburger {
@@ -45,9 +55,36 @@ header {
 
 /* Navbar */
 nav {
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
     flex-direction: row-reverse;
     padding: 20px;
+}
+
+.side-indicator {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side-link {
+    display: block;
+    height: 15px;
+    width: 15px;
+    border: 2.2px solid #2E2A2A;
+    border-radius: 7.5px;
+    margin: 10px;
+    transition: background-color 0.2s;
+}
+
+.side-link:hover, .router-link-exact-active {
+    background-color: #2E2A2A;
 }
 
 @media (max-width: 500px){
