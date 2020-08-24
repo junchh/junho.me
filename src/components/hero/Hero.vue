@@ -21,7 +21,7 @@
                 caret-animation='blink'
                 ></vue-typer>
             </div>
-            <p class="description animate__animated animate__slideInLeft">Welcome to my personal website, You can find more information about me by scrolling below, or you could chill around and take a look at my projects!</p>
+            <p class="description animate__animated animate__slideInLeft">Welcome to my personal website, You can find more information about me by scrolling below, or you could take a look at my projects and blogs!</p>
             <router-link class="btn-cv animate__animated animate__fadeInDown" to="/about">About Me</router-link>
             <div class="icons">
                 <a class="icon-item animate__animated animate__fadeIn" href="#"><i class="fab fa-linkedin"></i></a>

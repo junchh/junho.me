@@ -9,10 +9,10 @@
         </nav>
         <div class="side-indicator">
             <ul>
-                <li><router-link class="side-link" to="/"></router-link></li>
-                <li><router-link class="side-link" to="/about"></router-link></li>
-                <li><router-link class="side-link" to="/projects"></router-link></li>
-                <li><router-link class="side-link" to="/blogs"></router-link></li>
+                <li><router-link :class="{'invert-side-link' : status}" class="side-link" to="/"></router-link></li>
+                <li><router-link :class="{'invert-side-link' : status}" class="side-link" to="/about"></router-link></li>
+                <li><router-link :class="{'invert-side-link' : status}" class="side-link" to="/projects"></router-link></li>
+                <li><router-link :class="{'invert-side-link' : status}" class="side-link" to="/blogs"></router-link></li>
             </ul>
         </div>
     </header>
@@ -42,6 +42,7 @@ header {
     padding-bottom: 0;
     padding-left: 9px;
     padding-right: 9px;
+    z-index: 1;
 }
 
 .hamburger-line {
@@ -80,13 +81,20 @@ nav {
     border: 2.2px solid #2E2A2A;
     border-radius: 7.5px;
     margin: 10px;
-    transition: background-color 0.2s;
+    transition: all 0.2s;
 }
 
 .side-link:hover, .router-link-exact-active {
     background-color: #2E2A2A;
 }
 
+.invert-side-link {
+    border: 2.2px solid #FFF;
+}
+
+.side-link:hover.invert-side-link, .router-link-exact-active.invert-side-link {
+    background-color: #FFF;
+}
 
 
 .cross1 {
