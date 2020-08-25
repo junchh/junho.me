@@ -33,6 +33,7 @@
                     </div>
                 </div>
                 -->
+                <!--
                 <div class="post-item animate__animated animate__fadeInDown">
                     <div class="post">
                         <v-lazy-image class="post-image" :src-placeholder="require('../../assets/images/stock1-placeholder.jpg')" :src="require('../../assets/images/image-1.jpg')" />
@@ -43,13 +44,16 @@
                         </p>
                     </div>
                 </div>
+                -->
             </div>
         </div>
+        <!--
         <div class="view-blogs">
             <a class="view-more-button animate__animated animate__fadeInDown" href="/blog">
                 View More <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </a>
         </div>
+        -->
         <div class="footer animate__animated animate__fadeIn">
             <p>
                 &copy; 2020 <a class="footer-link" href="#">Junho</a>. All rights reserved.

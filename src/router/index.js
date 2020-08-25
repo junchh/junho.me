@@ -39,10 +39,6 @@ Vue.use(VueRouter)
       title: 'My Blog Preview | Junho\'s Website'
     },
     component: BlogPreview
-  },
-  {
-    path: '*',
-    redirect: '/'
   }
 ]
 
