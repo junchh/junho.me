@@ -4,8 +4,8 @@
         "title": "Nostra Learning Center",
         "description": "This is a simple online learning website created with PHP and MySQL. the frontend is built with Bootstrap 3, so It's responsive by default. It has pages for materials, It also support online test, using a timer with javascript and also on the database to indicate when the test has finished. The test concept is loosely based UN (Ujian Nasional) so the layout / user interface may look familiar.",
         "technologies": ["PHP", "MySQL", "Javascript", "Bootstrap 3"],
-        "links": [["Live demo", "#"], ["View source code", "#"]],
-        "image": "placeholder.png"
+        "links": [["View source code", "https://github.com/junchh/nostra-learning"]],
+        "image": "nlc2.png"
     },
     {
         "id":1,
@@ -13,6 +13,6 @@
         "description": "This is my first attempt at creating a personal website to showcase my projects, and also to host my blog posts so people can read them. The main part of the website is built with Vue.js, I coded the web design and made it responsive from scratch (no styling framework), I also designed the illustration used in the home page. The cascading transition is inspired by PagePiling.js but since they don't seem to have a Vue port, I decided to code it from scratch. The blog side of the website is built with Gatsby.js, a static site generator based on react, I decided to do it with Gatsby since I want my blog to have great SEO, so people can find them through search engine. I might later migrate it to either Next.js or Nuxt.js.",
         "technologies": ["Vue.js", "Gatsby.js", "React.js", "Animate.css"],
         "links": [["Live demo", "https://junho.me"]],
-        "image": "placeholder.png"
+        "image": "portfolio2.png"
     }
 ]

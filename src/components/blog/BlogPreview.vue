@@ -11,6 +11,7 @@
         </div>
         <div class="posts-container">
             <div class="posts-grid"> 
+        <!--
                 <div class="post-item animate__animated animate__fadeInDown animate__faster">
                     <div class="post">
                         <v-lazy-image class="post-image" :src-placeholder="require('../../assets/images/stock1-placeholder.jpg')" :src="require('../../assets/images/stock1.jpg')" />
@@ -31,13 +32,14 @@
                         </p>
                     </div>
                 </div>
+                -->
                 <div class="post-item animate__animated animate__fadeInDown">
                     <div class="post">
-                        <v-lazy-image class="post-image" :src-placeholder="require('../../assets/images/stock1-placeholder.jpg')" :src="require('../../assets/images/stock3.jpg')" />
-                        <h1>Runaway a Road Adventure</h1> 
-                        <h2>May 3, 2015</h2>
+                        <v-lazy-image class="post-image" :src-placeholder="require('../../assets/images/stock1-placeholder.jpg')" :src="require('../../assets/images/image-1.jpg')" />
+                        <h1><a class="post-title" href="/blog/first-post/">First Post!</a></h1> 
+                        <h2>July 25, 2020</h2>
                         <p>
-    It may comfort you to know that Fry's death took only fifteen seconds, yet the pain was so intense, that it felt to him like fifteen years.
+    Welcome to my blog! this is actually my first post ever on this blog. I used to write on other blog platform, but this is the first time I’m actually writing a blog post on my own website...
                         </p>
                     </div>
                 </div>
@@ -134,6 +136,7 @@
 
 .posts-container {
     margin-top: 120px;
+    margin-bottom: 70px;
     display: flex;
     justify-content: center;
 }
@@ -159,6 +162,10 @@
     line-height: 20px;
     font-size: 14px;
     text-transform: uppercase;
+    color: #3d3d61;
+}
+
+.post-title {
     color: #3d3d61;
 }
 
@@ -210,12 +217,11 @@
 }
 
 .footer {
-    margin-top: 75px;
+    margin-top: 90px;
     width: 100%;
     display: flex;
     justify-content: center;
     font-size: 1.6rem;
-    padding: 20px;
 }
 
 .footer-link {
@@ -225,7 +231,6 @@
 .footer-link:hover {
     color: #D3D3F5;
 }
-
 
 
 @media (max-width: 1100px){

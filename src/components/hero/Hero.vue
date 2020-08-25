@@ -8,7 +8,7 @@
             <h1 class="title animate__animated animate__slideInLeft">Junho Choi</h1>
             <div class="animate__animated animate__bounceInDown">
                 <vue-typer
-                :text='["A Student.", "A Web Developer.","A Writer."]'
+                :text='["A Student.", "An Aspiring Developer.","A Writer."]'
                 :repeat='Infinity'
                 :shuffle='false'
                 initial-action='typing'
@@ -24,8 +24,8 @@
             <p class="description animate__animated animate__slideInLeft">Welcome to my personal website, You can find more information about me by scrolling below, or you could take a look at my projects and blogs!</p>
             <router-link class="btn-cv animate__animated animate__fadeInDown" to="/about">About Me</router-link>
             <div class="icons">
-                <a class="icon-item animate__animated animate__fadeIn" href="#"><i class="fab fa-linkedin"></i></a>
-                <a class="icon-item animate__animated animate__fadeIn" href="#"><i class="fab fa-github"></i></a>
+                <a target="_blank" class="icon-item animate__animated animate__fadeIn" href="https://linkedin.com/in/junhoch"><i class="fab fa-linkedin"></i></a>
+                <a target="_blank" class="icon-item animate__animated animate__fadeIn" href="https://github.com/junchh"><i class="fab fa-github"></i></a>
             </div>
         </div>
         <div class="personal-design animate__animated animate__slideInRight">

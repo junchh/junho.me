@@ -12,7 +12,7 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     meta: {
-      title: 'Homepage'
+      title: 'Junho\'s Website'
     },
     component: Hero
   },
@@ -20,7 +20,7 @@ Vue.use(VueRouter)
     path: '/about',
     name: 'About',
     meta: {
-      title: 'About Me'
+      title: 'About Me | Junho\'s Website'
     },
     component: AboutAlternate
   },
@@ -28,7 +28,7 @@ Vue.use(VueRouter)
     path: '/projects',
     name: 'Projects',
     meta: {
-      title: 'My Projects'
+      title: 'My Projects | Junho\'s Website'
     },
     component: Projects
   },
@@ -36,7 +36,7 @@ Vue.use(VueRouter)
     path: '/blogs',
     name: 'BlogPreview',
     meta: {
-      title: 'My Blog Posts'
+      title: 'My Blog Preview | Junho\'s Website'
     },
     component: BlogPreview
   },

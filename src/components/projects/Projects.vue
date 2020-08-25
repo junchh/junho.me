@@ -14,7 +14,7 @@
                         <h1 class="animate__animated animate__fadeIn">Overview</h1>
                         <p class="animate__animated animate__fadeIn">{{projects[curId].description}}</p>
                         <div class="projectview-links">
-                            <a v-for="item in projects[curId].links" :key="item[0]" :href="item[1]">
+                            <a target="_blank" v-for="item in projects[curId].links" :key="item[0]" :href="item[1]">
                                 {{item[0]}}
                             </a>
                         </div>

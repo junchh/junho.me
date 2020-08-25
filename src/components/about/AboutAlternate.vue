@@ -8,14 +8,14 @@
                 <p class="about-desc-text animate__animated animate__slideInDown">
                     I love writing, coding, and enjoys developing in either backend or frontend. I also solve coding problems occasionally.
                 </p>
-                <button class="btn-cv animate__animated animate__fadeInDown">Contact Me</button>
+                <a href="mailto:cjunho9868@gmail.com" class="anchor-btn btn-cv animate__animated animate__fadeInDown">Contact Me</a>
             </div>
             <div class="about-links">
                 <ul>
-                    <li class="about-link-items animate__animated animate__bounceInDown duration-4"><a href="#"><i class="fa fa-envelope"></i></a></li>
-                    <li class="about-link-items animate__animated animate__bounceInDown duration-3"><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                    <li class="about-link-items animate__animated animate__bounceInDown duration-2"><a href="#"><i class="fab fa-github"></i></a></li>
-                    <li class="about-link-items animate__animated animate__bounceInDown duration-1"><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                    <li class="about-link-items animate__animated animate__bounceInDown duration-4"><a href="mailto:cjunho9868@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                    <li class="about-link-items animate__animated animate__bounceInDown duration-3"><a target="_blank" href="https://linkedin.com/in/junhoch"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="about-link-items animate__animated animate__bounceInDown duration-2"><a target="_blank" href="https://github.com/junchh"><i class="fab fa-github"></i></a></li>
+                    <li class="about-link-items animate__animated animate__bounceInDown duration-1"><a target="_blank" href="https://dribbble.com/junchh"><i class="fab fa-dribbble"></i></a></li>
                 </ul>
             </div>
             <div class="coding-illustration">
@@ -162,6 +162,12 @@ section.about {
     background-color: #DEDEFF;
     bottom: 130px;
     right: 520px;
+}
+
+.anchor-btn {
+    padding: 15px 50px 15px 50px;
+    text-align: center;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1100px) {
