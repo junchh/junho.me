@@ -1,5 +1,5 @@
 <template>
-    <section :style="{ 'background-image': 'url(' + this.imageUrl + ')'}" class="about">
+    <section v-lazy:background-image="require('../../assets/images/test-background-new.jpg')" class="about">
         <div class="about-content animate__animated animate__slideInRight">
             <div class="about-description">
                 <p class="about-desc-text animate__animated animate__slideInDown">
@@ -27,30 +27,6 @@
 
 <script>
     export default {
-        data: function() {
-            return {
-                image: '',
-                imageUrl: '',
-                styleObject: {}
-            }
-        },
-        methods: {
-            setImage() {
-                this.imageUrl = require('../../assets/images/test-background-new.jpg')
-                const img = new Image() 
-                img.onload = function() {
-                    console.log('loaded!')
-                    this.styleObject = {
-                        backgroundImage: 'url(' + this.imageUrl + ')'
-                    }
-                }
-
-                img.src = this.imageUrl
-            }
-        },
-        mounted: function() {
-            this.setImage()
-        }
     }
 </script>
 
