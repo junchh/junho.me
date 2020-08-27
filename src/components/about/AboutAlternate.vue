@@ -146,6 +146,24 @@ section.about {
     cursor: pointer;
 }
 
+img[lazy='loaded'] {
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    @keyframes fadein {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .about-content {
         width: 100%;
