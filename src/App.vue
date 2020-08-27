@@ -94,8 +94,10 @@
             }.bind(this))
             document.addEventListener('touchend', function(e) {
                 const deltaY = e.changedTouches[0].clientY - this.touchY 
-                console.log(deltaY)
-                this.handleScroll(-1 * deltaY)
+                if(Math.abs(deltaY) > 50) {
+                    this.handleScroll(-1 * deltaY)
+                }
+                
             }.bind(this))
         }
     }
