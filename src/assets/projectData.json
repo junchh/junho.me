@@ -13,7 +13,7 @@
         "description": "This is a card game based on Yugioh or Magic The Gathering, a turn based game where you can play another player and you each have a deck and a field to play and battle each other. This program was made with Java and JavaFX (for the Graphical User Interface).",
         "technologies": ["Java", "JavaFX"],
         "links": [["View source code", "https://github.com/donbasta/avatar-duel-OOP"]],
-        "image": "avatar-duel.png"
+        "image": "avatar.png"
     },
     {
         "id":2,
