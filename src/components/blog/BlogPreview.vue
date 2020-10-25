@@ -10,6 +10,7 @@
             </div>
         </div>
         <div class="posts-container">
+            <h1>Coming Soon!</h1>
             <div class="posts-grid"> 
         <!--
                 <div class="post-item animate__animated animate__fadeInDown animate__faster">
