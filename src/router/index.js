@@ -33,10 +33,10 @@ Vue.use(VueRouter)
     component: Projects
   },
   {
-    path: '/blogs',
+    path: '/publication',
     name: 'BlogPreview',
     meta: {
-      title: 'My Blog Preview | Junho\'s Website'
+      title: 'My Publications | Junho\'s Website'
     },
     component: BlogPreview
   }

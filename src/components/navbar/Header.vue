@@ -12,7 +12,7 @@
                 <li><router-link :class="{'invert-side-link' : status}" class="side-link" to="/"></router-link></li>
                 <li><router-link :class="{'invert-side-link' : status}" class="side-link" to="/about"></router-link></li>
                 <li><router-link :class="{'invert-side-link' : status}" class="side-link" to="/projects"></router-link></li>
-                <li><router-link :class="{'invert-side-link' : status}" class="side-link" to="/blogs"></router-link></li>
+                <li><router-link :class="{'invert-side-link' : status}" class="side-link" to="/publication"></router-link></li>
             </ul>
         </div>
     </header>

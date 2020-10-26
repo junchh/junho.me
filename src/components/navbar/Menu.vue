@@ -22,7 +22,7 @@
         </router-link>
     </li>
     <li class="nav-item">
-        <router-link class="nav-link" to="/blogs">
+        <router-link class="nav-link" to="/publication">
             Blog
             <div class="slider"></div>
         </router-link>

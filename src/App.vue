@@ -20,7 +20,7 @@
             return {
                 menuShown: false,
                 stillScrolling: false,
-                hierarchy: ["/", "/about", "/projects", "/blogs"],
+                hierarchy: ["/", "/about", "/projects", "/publication"],
                 touchY: 0,
                 transitionName: ''
             }

@@ -1,64 +1,30 @@
 <template>
-    <section class="blogpreview">
-        <div class="bubble1 animate__animated animate__slideInRight"></div>
-        <div class="bubble2 animate__animated animate__zoomInDown"></div>
-        <div class="bubble3 animate__animated animate__zoomInDown"></div>
-        <div class="blogpreview-title">
-            <div class="blogpreview-title-text">
-                <h1>My Blogs</h1>
-                <div class="blogpreview-line"></div>
+    <section v-lazy:background-image="require('../../assets/images/test-background-new.jpg')" class="publication">
+        <div class="publication-content animate__animated animate__slideInLeft">
+            <div class="publication-description">
+                <p class="publication-desc-text animate__animated animate__slideInDown">
+                    Here are some of my publications, below are some of the papers that I worked on.
+                </p>
+                <ol class="publication-desc-ol">
+                    <li><a href="https://informatika.stei.itb.ac.id/~rinaldi.munir/Matdis/2019-2020/Makalah2019/13518044.pdf">Application of Number Theory in Random Number Generation to Strengthen Plaintext Encryption</a></li>
+                    <li><a href="https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2019-2020/Makalah/stima2020k2-041.pdf">Application of Decrease and Conquer in Monotonic Function Analysis (Indonesian)</a></li>
+                </ol>
+                <p class="publication-desc-text animate__animated animate__slideInDown">
+                    Other than that I also likes to write on a blog. my blog can be found <a href="https://blog.junho.me">here</a>.
+                </p>
+                
             </div>
-        </div>
-        <div class="posts-container">
-            <h1>Coming Soon!</h1>
-            <div class="posts-grid"> 
-        <!--
-                <div class="post-item animate__animated animate__fadeInDown animate__faster">
-                    <div class="post">
-                        <v-lazy-image class="post-image" :src-placeholder="require('../../assets/images/stock1-placeholder.jpg')" :src="require('../../assets/images/stock1.jpg')" />
-                        <h1>Creating Cascading Pages like pagePiling.js from scratch with Vue</h1> 
-                        <h2>May 6, 2015</h2>
-                        <p>
-    We circled for some time without doing much damage on either side; the long, straight, needle-like swords flashing in the sunlight, and ringing ...
-                        </p>
-                    </div>
-                </div>
-                <div class="post-item animate__animated animate__fadeInDown animate__fast">
-                    <div class="post">
-                        <v-lazy-image class="post-image" :src-placeholder="require('../../assets/images/stock2-placeholder.jpg')" :src="require('../../assets/images/stock2.jpg')" />
-                        <h1>All in Our Head</h1> 
-                        <h2>May 5, 2015</h2>
-                        <p>
-    It's just like the story of the grasshopper and the octopus. All year long, the grasshopper kept burying acorns for winter, while the octopus ...
-                        </p>
-                    </div>
-                </div>
-                -->
-                <!--
-                <div class="post-item animate__animated animate__fadeInDown">
-                    <div class="post">
-                        <v-lazy-image class="post-image" :src-placeholder="require('../../assets/images/stock1-placeholder.jpg')" :src="require('../../assets/images/image-1.jpg')" />
-                        <h1><a class="post-title" href="/blog/first-post/">First Post!</a></h1> 
-                        <h2>July 25, 2020</h2>
-                        <p>
-    Welcome to my blog! this is actually my first post ever on this blog. I used to write on other blog platform, but this is the first time I’m actually writing a blog post on my own website...
-                        </p>
-                    </div>
-                </div>
-                -->
+            <div class="publication-links">
+                <ul>
+                    <li class="publication-link-items animate__animated animate__bounceInDown duration-4"><a href="mailto:cjunho9868@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                    <li class="publication-link-items animate__animated animate__bounceInDown duration-3"><a target="_blank" href="https://linkedin.com/in/junhoch"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="publication-link-items animate__animated animate__bounceInDown duration-2"><a target="_blank" href="https://github.com/junchh"><i class="fab fa-github"></i></a></li>
+                    <li class="publication-link-items animate__animated animate__bounceInDown duration-1"><a target="_blank" href="https://dribbble.com/junchh"><i class="fab fa-dribbble"></i></a></li>
+                </ul>
             </div>
-        </div>
-        <!--
-        <div class="view-blogs">
-            <a class="view-more-button animate__animated animate__fadeInDown" href="/blog">
-                View More <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            </a>
-        </div>
-        -->
-        <div class="footer animate__animated animate__fadeIn">
-            <p>
-                &copy; 2020 <a class="footer-link" href="#">Junho</a>. All rights reserved.
-            </p>
+            <div class="coding-illustration">
+                <v-lazy-image :src="require('../../assets/images/file.png')" />
+            </div>
         </div>
     </section>
 </template>
@@ -69,213 +35,201 @@
 </script>
 
 <style>
-.blogpreview {
-    min-height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+section.publication {
+    height: 100vh;
     width: 100vw;
     z-index: 1;
-    background-color:#FFFFFF;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #646496;
+    background-blend-mode: lighten;
     position: absolute;
     overflow: hidden;
+
+    animation: fadein 0.15s;
+    -moz-animation: fadein 0.15s; /* Firefox */
+    -webkit-animation: fadein 0.15s; /* Safari and Chrome */
+    -o-animation: fadein 0.15s; /* Opera */
 }
 
-.blogpreview .bubble1 {
-    background-color: #F3F3FF;
-    height: 200px;
-    width: 200px;
-    border-radius: 450px;
-    top: -80px;
-    right: -80px;
-    z-index: -1;
+.publication-content {
+    width: 900px;
+    height: 100vh;
+    background-color: #FFF;
     position: absolute;
+    left: 0;
 }
 
-.blogpreview .bubble2 {
-    background-color: #F3F3FF;
-    height: 170px;
-    width: 170px;
-    border-radius: 100px;
-    left: -20px;
-    bottom: -20px;
-    z-index: -1;
-    position: absolute;
-}
-
-.blogpreview .bubble3 {
-    background-color: #F3F3FF;
-    height: 70px;
-    width: 70px;
-    border-radius: 40px;
-    left: -20px;
-    bottom: 210px;
-    z-index: -1;
-    position: absolute;
-}
-
-.blogpreview-title {
-    margin-top: 50px;
-}
-
-.blogpreview-title-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.blogpreview-title-text h1:hover ~ .blogpreview-line {
-    width: 200px;
-}
-
-.blogpreview-title-text h1 {
-    font-family: 'Rubik', sans-serif;
-    font-size: 4.2rem;
-    font-weight: 300;
-}
-
-.blogpreview-line {
-    margin-top: 20px;
-    width: 70px;
-    height: 3px;
-    background-color: #000000;
-    transition: width 0.2s;
-}
-
-.posts-container {
-    margin-top: 120px;
-    margin-bottom: 70px;
-    display: flex;
-    justify-content: center;
-}
-
-.posts-grid {
-    display: grid;
-    width: 1080px;
-    grid-template-columns: repeat(3, 360px);
-}
-
-.post-item {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.post {
-    width: 300px;
-}
-
-.post h1 {
-    margin-top: 16px;
-    line-height: 20px;
-    font-size: 14px;
-    text-transform: uppercase;
-    color: #3d3d61;
-}
-
-.post-title {
-    color: #3d3d61;
-}
-
-.post h2 {
-    margin-top: 10px;
-    color: #b8b8d3;
-    font-size: 12px;
-    text-transform: uppercase;
-}
-
-.post p {
-    margin-top: 20px;
-    font-family: 'Droid Serif', Georgia, serif;
-    font-size: 15px;
-    line-height: 24px;
-    color: #56566b;
-}
-
-.post-image {
-    width: 300px;
-}
-
-.view-blogs {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.view-more-button {
-    text-align: center;
-    width: 200px;
-    background-color: transparent;
-    border: 3px solid #000000;
-    color: #000000;
-    padding: 12px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    transition: all 0.2s;
-}
-
-.view-more-button:hover {
-    color: #FFFFFF;
-    background-color: #D3D3F5;
-    border-color: #D3D3F5;
-}
-
-.view-more-button:focus {
-    outline: none;
-}
-
-.footer {
+.publication-description {
+    width: 800px;
+    margin: auto;
     margin-top: 90px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: 1.6rem;
 }
 
-.footer-link {
-    color: #a0a0c9;
+.publication-desc-text {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2.2rem;
+    line-height: 55px;
+    margin-bottom: 30px;
 }
 
-.footer-link:hover {
+.publication-desc-ol {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.8rem;
+    line-height: 55px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+.publication-desc-ol > li > a {
+    color:#73739e;
+}
+
+.publication-desc-ol > li > a:hover {
+    color: #8585b1;
+}
+
+
+.publication-links {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+.duration-1 {
+    --animate-duration: 0.9s;
+}
+
+.duration-2 {
+    --animate-duration: 1.2s;
+}
+
+.duration-3 {
+    --animate-duration: 1.5s;
+}
+
+.duration-4 {
+    --animate-duration: 1.8s;
+}
+
+.publication-link-items {
+    font-size: 2.3rem;
+    padding: 12.5px;
+}
+
+.publication-link-items a {
+    color: #2E2A2A;
+    transition: color 0.1s;
+}
+
+.publication-link-items a:hover {
     color: #D3D3F5;
 }
 
+.coding-illustration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 80px;
+    z-index: -1;
+}
 
-@media (max-width: 1100px){
-    .posts-grid {
-        width: 100%;
-        grid-template-columns: repeat(2, 50%);
-    }
+.coding-illustration > img {
+    width: 350px;
+}
 
-    .post {
-        width: 90%;
-    }
+.publication-box2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #D3D3F5;
+    bottom: 0;
+    right: 520px;
+}
 
-    .post-image {
-        width: 100%;
+.publication-box1 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background-color: #DEDEFF;
+    bottom: 130px;
+    right: 520px;
+}
+
+.anchor-btn {
+    padding: 15px 50px 15px 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+img[lazy='loaded'] {
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    @keyframes fadein {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 }
 
-@media (max-width: 600px){
-    .posts-grid {
-        grid-template-columns: 100%;
+@media screen and (max-width: 1100px) {
+    .publication-content {
+        width: 100%;
     }
 
-    .post-item {
-        margin-bottom: 80px;
+    .publication-description {
+        width: calc(100% - 100px);
     }
 
-    .post {
-        width: 80%;
+    .publication-desc-text {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .publication-desc-ol {
+        font-size: 1.6rem;
+    }
+
+    .publication-links {
+        margin-left: 0;
     }
 }
 
-@media (max-width: 500px){
-    .blogpreview-title-text h1:hover ~ .blogpreview-line {
-        width: 160px;
+@media screen and (max-width: 700px) {
+    .publication-desc-text {
+        font-size: 1.5rem;
+        line-height: 35px;
     }
 
-    .blogpreview-title-text h1 {
-        font-family: 'Rubik', sans-serif;
-        font-size: 3.2rem;
-        font-weight: 300;
+    .publication-desc-ol {
+        font-size: 1.4rem;
+    }
+
+    .coding-illustration { 
+        display: none;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .coding-illustration { 
+        display: none;
+    }
+
+    .publication-description {
+        margin-left: 70px;
     }
 }
 </style>
