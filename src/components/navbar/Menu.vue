@@ -23,7 +23,7 @@
     </li>
     <li class="nav-item">
         <router-link class="nav-link" to="/publication">
-            Blog
+            Publication
             <div class="slider"></div>
         </router-link>
     </li>
