@@ -39,6 +39,10 @@ Vue.use(VueRouter)
       title: 'My Publications | Junho\'s Website'
     },
     component: BlogPreview
+  },
+  {
+    path: '*',
+    redirect: '/'
   }
 ]
 
