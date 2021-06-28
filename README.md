@@ -1,9 +1,6 @@
 # portfolio_vue
 
-## To Do
--Finish project list
--Finish blog
--Add side floating navigation
+## To Do=
 
 ## Project setup
 ```
