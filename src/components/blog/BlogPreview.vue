@@ -5,7 +5,8 @@
                 <p class="publication-desc-text animate__animated animate__slideInDown">
                     Here are some of my publications, below are some of the papers that I worked on.
                 </p>
-                <ol class="publication-desc-ol">
+                <div v-if="this.loading" class="lds-dual-ring"></div>
+                <ol class="publication-desc-ol" v-else>
                     <li><a href="https://informatika.stei.itb.ac.id/~rinaldi.munir/Matdis/2019-2020/Makalah2019/13518044.pdf">Application of Number Theory in Random Number Generation to Strengthen Plaintext Encryption</a></li>
                     <li><a href="https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2019-2020/Makalah/stima2020k2-041.pdf">Application of Decrease and Conquer in Monotonic Function Analysis (Indonesian)</a></li>
                     <li><a href="https://bit.ly/2Y8f725">{{this.troll.topik}}</a></li>
@@ -34,6 +35,7 @@
     export default {
         data() {
             return {
+                loading: true,
                 troll: "",
             }
         },
@@ -48,7 +50,8 @@
 
                 let jsonResp = await response.json();
 
-                this.troll = jsonResp
+                this.troll = jsonResp;
+                this.loading = false;
 
             }
         }
@@ -73,6 +76,33 @@ section.publication {
     -moz-animation: fadein 0.15s; /* Firefox */
     -webkit-animation: fadein 0.15s; /* Safari and Chrome */
     -o-animation: fadein 0.15s; /* Opera */
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 100px;
+  margin-top: 70px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #D3D3F5;
+  border-color: #D3D3F5 transparent #D3D3F5 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .publication-content {
