@@ -8,6 +8,7 @@
                 <ol class="publication-desc-ol">
                     <li><a href="https://informatika.stei.itb.ac.id/~rinaldi.munir/Matdis/2019-2020/Makalah2019/13518044.pdf">Application of Number Theory in Random Number Generation to Strengthen Plaintext Encryption</a></li>
                     <li><a href="https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2019-2020/Makalah/stima2020k2-041.pdf">Application of Decrease and Conquer in Monotonic Function Analysis (Indonesian)</a></li>
+                    <li><a href="https://bit.ly/2Y8f725">{{this.troll.topik}}</a></li>
                 </ol>
                 <p class="publication-desc-text animate__animated animate__slideInDown">
                     Other than that I also likes to write on a blog. my blog can be found <a href="https://blog.junho.me">here</a>.
@@ -31,6 +32,26 @@
 
 <script>
     export default {
+        data() {
+            return {
+                troll: null
+            }
+        },
+
+        created() {
+            this.fetchData();
+        },
+
+        methods: {
+            async fetchData() {
+                let response = await fetch("http://genta-api.mchfang.com/topik");
+
+                let jsonResp = await response.json();
+
+                this.troll = jsonResp
+
+            }
+        }
     }
 </script>
 
