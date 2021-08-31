@@ -34,7 +34,7 @@
     export default {
         data() {
             return {
-                troll: null
+                troll: "",
             }
         },
 
