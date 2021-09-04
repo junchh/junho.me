@@ -46,7 +46,7 @@
 
         methods: {
             async fetchData() {
-                let response = await fetch("https://genta-api.mchfang.com/topik");
+                let response = await fetch("https://api.gendut.in/topik");
 
                 let jsonResp = await response.json();
 
