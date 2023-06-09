@@ -15,10 +15,6 @@
           I graduated with a bachelor's degree in Informatics from Bandung
           Institute of Technology.
         </p>
-        <p class="about-desc-text animate__animated animate__slideInDown">
-          I like to explore new technologies, and I always try to sharpen my
-          knowledge and skills in technology.
-        </p>
         <a
           href="mailto:cjunho9868@gmail.com"
           class="anchor-btn btn-cv animate__animated animate__fadeInDown"
