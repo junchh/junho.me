@@ -1,50 +1,77 @@
 [
-    {
-        "id":0,
-        "title": "TIE Quiz",
-        "description": "A QuizUp Clone created with Next.js, Express.js, Socket.IO. Uses MySQL as the database",
-        "technologies": ["Next.js", "React", "Express.js", "Node.js", "Socket.IO", "TypeORM", "MySQL"],
-        "links": [["View frontend source code", "https://github.com/hmif-itb/tie-quiz"], ["View backend code", "https://github.com/hmif-itb/tie-quiz-backend"]],
-        "image": "tie.png"
-    },
-    {
-        "id":1,
-        "title": "Willy Wangky Web",
-        "description": "This is a project for web development class. My friend and I developed this project together, there are 4 main components of this project, The Willy Wangky Web which is the main website that you can visit, register, buy chocolates, etc (created using PHP and MySQL, and also communicate with the SOAP service). The other one is the Factory website used by the admin to restock the chocolates (created using react, and communicate with the SOAP service and Supplier service). The SOAP Web Service is created using Java, the Supplier Web Service is created using Node.js",
-        "technologies": ["React.js", "TypeScript", "PHP", "SOAP", "Java", "Node.js", "MySQL"],
-        "links": [["View web source code", "https://github.com/junchh/wbd-coklat-wangky"], ["View supplier source code", "https://github.com/junchh/wbd-ws-supplier"], ["View react source code", "https://github.com/mkamadeus/wbd-willy-wangky-factory"], ["View java source code", "https://github.com/mkamadeus/wbd-ws-factory"]],
-        "image": "willywangky.png"
-    },
-    {
-        "id":2,
-        "title": "Halma AI Bot using Minimax Algorithm & Local Search",
-        "description": "This is a class project to analyze and understand how to use Minimax Algorithm & Local Search to create an artificially intelligent bot capable of playing the game of Halma, there are some modes to the game, you can play with other people, you can play with a bot, or you can watch two bots play each other.",
-        "technologies": ["Javascript", "CSS", "HTML"],
-        "links": [["Live demo", "https://halma.netlify.app/"], ["View source code", "https://github.com/junchh/halma-AI-1"]],
-        "image": "halma.png"
-    },
-    {
-        "id":3,
-        "title": "Personal Website",
-        "description": "This is my first attempt at creating a personal website to showcase my projects, and also to host my blog posts so people can read them. The main part of the website is built with Vue.js, I coded the web design and made it responsive from scratch (no styling framework), I also designed the illustration used in the home page. The cascading transition is inspired by PagePiling.js but since they don't seem to have a Vue port, I decided to code it from scratch. The blog side of the website is built with Gatsby.js, a static site generator based on react, I decided to do it with Gatsby since I want my blog to have great SEO, so people can find them through search engine. I might later migrate it to either Next.js or Nuxt.js.",
-        "technologies": ["Vue.js", "Gatsby.js", "Animate.css"],
-        "links": [["Live demo", "https://junho.me"]],
-        "image": "portfolio2.png"
-    },
-    {
-        "id":4,
-        "title": "Nostra Learning Center",
-        "description": "This is a simple online learning website created with PHP and MySQL. the frontend is built with Bootstrap 3, so It's responsive by default. It has pages for materials, It also support online test, using a timer with javascript and also on the database to indicate when the test has finished. The test concept is loosely based UN (Ujian Nasional) so the layout / user interface may look familiar.",
-        "technologies": ["PHP", "MySQL", "Javascript", "Bootstrap 3"],
-        "links": [["View source code", "https://github.com/junchh/nostra-learning"]],
-        "image": "nlc2.png"
-    },
-    {
-        "id":5,
-        "title": "Avatar World War",
-        "description": "This is a card game based on Yugioh or Magic The Gathering, a turn based game where you can play another player and you each have a deck and a field to play and battle each other. This program was made with Java and JavaFX (for the Graphical User Interface).",
-        "technologies": ["Java", "JavaFX"],
-        "links": [["View source code", "https://github.com/donbasta/avatar-duel-OOP"]],
-        "image": "avatar.png"
-    }
+  {
+    "id": 0,
+    "title": "TIE Quiz",
+    "description": "A QuizUp Clone built with Next.js, Express.js, Socket.IO.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Express.js",
+      "Node.js",
+      "Socket.IO",
+      "TypeORM",
+      "MySQL"
+    ],
+    "links": [
+      ["View frontend source code", "https://github.com/hmif-itb/tie-quiz"],
+      ["View backend code", "https://github.com/hmif-itb/tie-quiz-backend"]
+    ],
+    "image": "tie.png"
+  },
+  {
+    "id": 1,
+    "title": "Willy Wangky Web",
+    "description": "A project from my Web Development class at university. We were required to build a fully functioning online store that sells chocolates. We built the customer facing website using PHP and MySQL. This site will then communicate with the chocolate factory service built using Java (SOAP) and the supplier web service built using JavaScript (Node.js).",
+    "technologies": [
+      "React.js",
+      "TypeScript",
+      "PHP",
+      "SOAP",
+      "Java",
+      "Node.js",
+      "MySQL"
+    ],
+    "links": [
+      ["View web source code", "https://github.com/junchh/wbd-coklat-wangky"],
+      [
+        "View supplier source code",
+        "https://github.com/junchh/wbd-ws-supplier"
+      ],
+      [
+        "View react source code",
+        "https://github.com/mkamadeus/wbd-willy-wangky-factory"
+      ],
+      ["View java source code", "https://github.com/mkamadeus/wbd-ws-factory"]
+    ],
+    "image": "willywangky.png"
+  },
+  {
+    "id": 2,
+    "title": "Halma AI Bot using Minimax Algorithm & Local Search",
+    "description": "A project from my Artificial Intelligence class at university. We were required to build a playable halma clone. We were also required to build an artificially intelligent bot capable of playing the game of halma.",
+    "technologies": ["Javascript", "CSS", "HTML"],
+    "links": [
+      ["Live demo", "https://halma.netlify.app/"],
+      ["View source code", "https://github.com/junchh/halma-AI-1"]
+    ],
+    "image": "halma.png"
+  },
+  {
+    "id": 3,
+    "title": "Personal Website",
+    "description": "This is a personal project of mine, I built this with Vue.js. The main motivation for this project is so that I can have my own personal website, host my blog posts, showcase my projects, and provide a simple introduction to my interests. The cascading transition is inspired by PagePiling.js, but it can’t really work with Vue.js so I decided to recreate the whole thing in Vue.js.",
+    "technologies": ["Vue.js", "Gatsby.js", "Animate.css"],
+    "links": [["Live demo", "https://junho.me"]],
+    "image": "portfolio2.png"
+  },
+  {
+    "id": 4,
+    "title": "Avatar World War",
+    "description": "A project from my Object-Oriented Programming class at university. We were required to build a turn-based card game loosely based on Yu-Gi-Oh! Using Java and JavaFX.",
+    "technologies": ["Java", "JavaFX"],
+    "links": [
+      ["View source code", "https://github.com/donbasta/avatar-duel-OOP"]
+    ],
+    "image": "avatar.png"
+  }
 ]
