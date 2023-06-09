@@ -1,11 +1,22 @@
 [
   {
     "id": 0,
+    "title": "Junhordle",
+    "description": "An attempt to clone wordle from The New York Times. Built using React.js",
+    "technologies": ["React.js", "TypeScript", "CSS"],
+    "links": [
+      ["Live demo", "https://junhordle.netlify.app/"],
+      ["View source code", "https://github.com/junchh/junhordle"]
+    ],
+    "image": "junhordle.png"
+  },
+  {
+    "id": 1,
     "title": "TIE Quiz",
     "description": "A QuizUp Clone built with Next.js, Express.js, Socket.IO.",
     "technologies": [
       "Next.js",
-      "React",
+      "React.js",
       "Express.js",
       "Node.js",
       "Socket.IO",
@@ -19,7 +30,7 @@
     "image": "tie.png"
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "Willy Wangky Web",
     "description": "A project from my Web Development class at university. We were required to build a fully functioning online store that sells chocolates. We built the customer facing website using PHP and MySQL. This site will then communicate with the chocolate factory service built using Java (SOAP) and the supplier web service built using JavaScript (Node.js).",
     "technologies": [
@@ -46,7 +57,7 @@
     "image": "willywangky.png"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Halma AI Bot using Minimax Algorithm & Local Search",
     "description": "A project from my Artificial Intelligence class at university. We were required to build a playable halma clone. We were also required to build an artificially intelligent bot capable of playing the game of halma.",
     "technologies": ["Javascript", "CSS", "HTML"],
@@ -57,7 +68,7 @@
     "image": "halma.png"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Personal Website",
     "description": "This is a personal project of mine, I built this with Vue.js. The main motivation for this project is so that I can have my own personal website, host my blog posts, showcase my projects, and provide a simple introduction to my interests. The cascading transition is inspired by PagePiling.js, but it can’t really work with Vue.js so I decided to recreate the whole thing in Vue.js.",
     "technologies": ["Vue.js", "Gatsby.js", "Animate.css"],
@@ -65,7 +76,7 @@
     "image": "portfolio2.png"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Avatar World War",
     "description": "A project from my Object-Oriented Programming class at university. We were required to build a turn-based card game loosely based on Yu-Gi-Oh! Using Java and JavaFX.",
     "technologies": ["Java", "JavaFX"],
