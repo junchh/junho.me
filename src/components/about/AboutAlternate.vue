@@ -8,7 +8,7 @@
     <div class="about-content animate__animated animate__slideInRight">
       <div class="about-description">
         <p class="about-desc-text animate__animated animate__slideInDown">
-          I'm a software engineer with over 1.5 years of software development
+          I'm a software engineer with over 2 years of software development
           experience focused on front-end development.
         </p>
         <p class="about-desc-text animate__animated animate__slideInDown">
@@ -33,7 +33,7 @@
           <li
             class="about-link-items animate__animated animate__bounceInDown duration-3"
           >
-            <a target="_blank" href="https://linkedin.com/in/junhoch"
+            <a target="_blank" href="https://linkedin.com/in/junchh"
               ><i class="fab fa-linkedin"></i
             ></a>
           </li>

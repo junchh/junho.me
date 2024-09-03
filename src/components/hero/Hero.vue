@@ -32,7 +32,7 @@
         <a
           target="_blank"
           class="icon-item animate__animated animate__fadeIn"
-          href="https://linkedin.com/in/junhoch"
+          href="https://linkedin.com/in/junchh"
           ><i class="fab fa-linkedin"></i
         ></a>
         <a
